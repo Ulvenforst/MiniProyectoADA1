@@ -12,3 +12,6 @@ además, cada sede tendrá $M$ equipos**, donde **cada equipo tendrá, a su vez,
 cada equipo puede contar con una cantidad minima $N_{min}$ y máxima $N_{max}$ de jugadores**,
 **cada jugador tendrá un número como identificador, su nombre, su edad y su rendimiento**, este 
 último tomará valores $x \in \mathbb{N} :1\leqslant x \leqslant 100$.
+
+> [!NOTE]
+> $K,M,N_{min},N_{max} \in \mathbb{N} \wedge N_{min}<N_{max}$
