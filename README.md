@@ -11,4 +11,4 @@ jugadores**. La asociación contará con **$K$ sedes, cada una de las cuales ten
 además, cada sede tendrá $M$ equipos**, donde **cada equipo tendrá, a su vez, un deporte definido,
 cada equipo puede contar con una cantidad minima $N_{min}$ y máxima $N_{max}$ de jugadores**,
 **cada jugador tendrá un número como identificador, su nombre, su edad y su rendimiento**, este 
-último tomará valores $x \in \N :1\leqslant x \leqslant 100$.
+último tomará valores $x \in \mathbb{N} :1\leqslant x \leqslant 100$.
