@@ -33,7 +33,7 @@ de saber el ranking de los jugadores para tomar decisiones respecto a esto, se r
 lista de todos los `jugadores` de todas las `sedes` **ordenados por su rendimiento ascendentemente**.
 
 ### Ejemplo del problema
-> Este código lo hice de manera rápida con base en el ejemplo del pdf con ánimo de empezar a estructurar las clase, por ende puede ser cambiado cuando se inicie el proyecto.
+> Este código lo hice de manera rápida con base en el ejemplo del pdf con ánimo de empezar a estructurar las clases, por ende puede ser cambiado cuando se inicie el proyecto.
 ```Python
 # Constantes que definirás según tus necesidades
 M = 2      # Número máximo de equipos por sede
