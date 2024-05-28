@@ -77,7 +77,7 @@ class Asociacion:
             for equipo in sede.equipos:
                 jugadores.extend(equipo.jugadores)
         # Supongamos que el ranking es simplemente por identificador
-        jugadores.sort(key=lambda jugador: jugador.identificador)
+        jugadores.sort(key=lambda jugador: jugador.identificador)  # Esto debe implementarse
         return [jugador.identificador for jugador in jugadores]
 
 asociacion = Asociacion()
@@ -112,14 +112,14 @@ asociacion.sedes.extend([sedeCali, sedeMedellin])
 ```
 La salida de esta instancia debería ser:
 ```Python
-Equipo& futbolMedellin = asociacion.sedes[1].equipos[0] //> {6, 7, 10}
-Equipo& volleyballMedellin = asociacion.sedes[1].equipos[1] //> {2, 4, 3}
+Equipo& futbolMedellin = asociacion.sedes[1].equipos[0] #> {6, 7, 10}
+Equipo& volleyballMedellin = asociacion.sedes[1].equipos[1] #> {2, 4, 3}
 
-Equipo& futbolCali = asociacion.sedes[0].equipos[0] //> {5, 0, 11, 8}
-Equipo& volleyballCali = asociacion.sedes[0].equipos[1] //> {1, 9}
+Equipo& futbolCali = asociacion.sedes[0].equipos[0] #> {5, 0, 11, 8}
+Equipo& volleyballCali = asociacion.sedes[0].equipos[1] #> {1, 9}
 
-// Si se supone un método en Asociacion para el ranking de jugadores:
-asociacion.ranking_jugadores() //>{2, 1, 6, 5, 4, 9, 0, 3, 11, 7, 10, 8}
+# Si se supone un método en Asociacion para el ranking de jugadores:
+asociacion.ranking_jugadores() #>{2, 1, 6, 5, 4, 9, 0, 3, 11, 7, 10, 8}
 ```
 Además de esto la asosiación, también necesita obtener algunos datos como:
 * Equipo con menor rendimiento.
