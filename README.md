@@ -35,7 +35,6 @@ lista de todos los `jugadores` de todas las `sedes` **ordenados por su rendimien
 ### Ejemplo del problema
 > Este código lo hice de manera rápida con base en el ejemplo del pdf con ánimo de empezar a estructurar las clases, por ende puede ser cambiado cuando se inicie el proyecto.
 ```Python
-# Constantes que definirás según tus necesidades
 M = 2      # Número máximo de equipos por sede
 K = 2      # Número máximo de sedes en la asociación
 N_min = 2  # Número mínimo de jugadores por equipo
