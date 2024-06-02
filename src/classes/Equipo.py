@@ -5,13 +5,13 @@ N_max = 4  # Número máximo de jugadores por equipo
 
 class Equipo:
     def __init__(self, deporte):
-        self.deporte = deporte
-        self.jugadores = []
+        self._deporte = deporte
+        self._jugadores = []
 
     def agregar_jugadores(self, nuevos_jugadores):
-        if len(self.jugadores) + len(nuevos_jugadores) > N_max:
-            print(f"El equipo {self.deporte} excederá el tamaño máximo permitido de jugadores.")
+        if len(self._jugadores) + len(nuevos_jugadores) > N_max:
+            print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
             return
-        self.jugadores.extend(nuevos_jugadores)
-        if len(self.jugadores) < N_min:
-            print(f"El equipo {self.deporte} no cumple con el tamaño mínimo requerido de jugadores.")
+        self._jugadores.extend(nuevos_jugadores)
+        if len(self._jugadores) < N_min:
+            print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")

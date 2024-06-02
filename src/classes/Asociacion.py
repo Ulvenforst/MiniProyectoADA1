@@ -1,9 +1,10 @@
 class Asociacion:
     def __init__(self):
-        self.sedes = []
+        self._sedes = []
+
     def ranking_jugadores(self):
         jugadores = []
-        for sede in self.sedes:
+        for sede in self._sedes:
             for equipo in sede.equipos:
                 jugadores.extend(equipo.jugadores)
         # Supongamos que el ranking es simplemente por identificador

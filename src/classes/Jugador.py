@@ -1,8 +1,8 @@
 class Jugador:
     contador = 0  # Contador automático
     def __init__(self, nombre, edad, rendimiento):
-        self.identificador = Jugador.contador + 1
         Jugador.contador += 1
-        self.nombre = nombre
-        self.edad = edad
-        self.rendimiento = rendimiento
+        self._identificador = Jugador.contador
+        self._nombre = nombre
+        self._edad = edad
+        self._rendimiento = rendimiento

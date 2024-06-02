@@ -1,4 +1,4 @@
 class Sede:
     def __init__(self, nombre):
-        self.nombre = nombre
-        self.equipos = []
+        self._nombre = nombre
+        self._equipos = []
