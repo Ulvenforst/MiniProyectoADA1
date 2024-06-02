@@ -33,119 +33,92 @@ de saber el ranking de los jugadores para tomar decisiones respecto a esto, se r
 lista de todos los `jugadores` de todas las `sedes` **ordenados por su rendimiento ascendentemente**.
 
 ### Ejemplo del problema
-```C++
-#include <iostream>
-#include <string>
-#include <vector>
+> Este código lo hice de manera rápida con base en el ejemplo del pdf con ánimo de empezar a estructurar las clases, por ende puede ser cambiado cuando se inicie el proyecto.
+```Python
+M = 2      # Número máximo de equipos por sede
+K = 2      # Número máximo de sedes en la asociación
+N_min = 2  # Número mínimo de jugadores por equipo
+N_max = 4  # Número máximo de jugadores por equipo
 
-// Constantes que definirás según tus necesidades
-#define M 2      // Número máximo de equipos por sede
-#define K 2      // Número máximo de sedes en la asociación
-#define N_min 2  // Número mínimo de jugadores por equipo
-#define N_max 4  // Número máximo de jugadores por equipo
+class Jugador:
+    contador = 0  # Contador automático
+    def __init__(self, nombre, edad, rendimiento):
+        self.identificador = Jugador.contador + 1
+        Jugador.contador += 1
+        self.nombre = nombre
+        self.edad = edad
+        self.rendimiento = rendimiento
 
-struct Jugador {
-    static int contador; // Contador automático
-    int identificador;
-    std::string nombre;
-    int edad;
-    int rendimiento;
+class Equipo:
+    def __init__(self, deporte):
+        self.deporte = deporte
+        self.jugadores = []
 
-    // Constructor que asigna un identificador automáticamente
-    Jugador(const std::string& nombre, int edad, int rendimiento)
-        : nombre(nombre), edad(edad), rendimiento(rendimiento) {
-        identificador = ++contador;
-    }
-};
+    def agregar_jugadores(self, nuevos_jugadores):
+        if len(self.jugadores) + len(nuevos_jugadores) > N_max:
+            print(f"El equipo {self.deporte} excederá el tamaño máximo permitido de jugadores.")
+            return
+        self.jugadores.extend(nuevos_jugadores)
+        if len(self.jugadores) < N_min:
+            print(f"El equipo {self.deporte} no cumple con el tamaño mínimo requerido de jugadores.")
 
-// Inicialización del contador de identificadores
-int Jugador::contador = 0;
+class Sede:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.equipos = []
 
-struct Equipo {
-    std::string deporte;
-    std::vector<Jugador> jugadores;
+class Asociacion:
+    def __init__(self):
+        self.sedes = []
+    def ranking_jugadores(self):
+        jugadores = []
+        for sede in self.sedes:
+            for equipo in sede.equipos:
+                jugadores.extend(equipo.jugadores)
+        # Supongamos que el ranking es simplemente por identificador
+        jugadores.sort(key=lambda jugador: jugador.identificador)  # Esto debe implementarse
+        return [jugador.identificador for jugador in jugadores]
 
-    // Constructor
-    Equipo(const std::string& deporte) : deporte(deporte) {}
+asociacion = Asociacion()
 
-    // Método para agregar un grupo de jugadores y validar el tamaño
-    void agregarJugadores(const std::vector<Jugador>& nuevosJugadores) {
-        if (jugadores.size() + nuevosJugadores.size() > N_max) {
-            std::cerr << "El equipo " << deporte << " excederá el tamaño máximo permitido de jugadores.\n";
-            return;
-        }
+# Crear jugadores
+jugadores = [
+    Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
+    Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
+    Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
+    Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
+    Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
+    Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
+]
 
-        jugadores.insert(jugadores.end(), nuevosJugadores.begin(), nuevosJugadores.end());
+# Crear equipos y sedes
+futbolCali = Equipo("Futbol")
+futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
+volleyballCali = Equipo("Volleyball")
+volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
 
-        if (jugadores.size() < N_min) {
-            std::cerr << "El equipo " << deporte << " no cumple con el tamaño mínimo requerido de jugadores.\n";
-        }
-    }
-};
+futbolMedellin = Equipo("Futbol")
+futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
+volleyballMedellin = Equipo("Volleyball")
+volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
 
-struct Sede {
-    std::string nombre;
-    std::vector<Equipo> equipos;
+sedeCali = Sede("Cali")
+sedeCali.equipos.extend([futbolCali, volleyballCali])
+sedeMedellin = Sede("Medellín")
+sedeMedellin.equipos.extend([futbolMedellin, volleyballMedellin])
 
-    // Constructor
-    Sede(const std::string& nombre) : nombre(nombre) {}
-};
-
-struct Asociacion {
-    std::vector<Sede> sedes;
-};
-
-int main() {
-    // Crear jugadores {<nombre>,<edad>,<rendimiento>}
-    std::vector<Jugador> jugadores = {
-        {"Sofia García", 21, 66}, {"Alejandro Torres", 27, 24}, {"Valentina Rodriguez", 19, 15},
-        {"Juan López", 22, 78}, {"Martina Martinez", 30, 55}, {"Sebastián Pérez", 25, 42},
-        {"Camila Fernández", 24, 36}, {"Mateo González", 29, 89}, {"Isabella Díaz", 21, 92},
-        {"Daniel Ruiz", 17, 57}, {"Luciana Sánchez", 18, 89}, {"Lucas Vásquez", 26, 82}
-    };
-
-    // Crear equipos para la sede de Cali
-    Equipo futbolCali("Futbol");
-    futbolCali.agregarJugadores({jugadores[9], jugadores[1]}); // IDs 10 y 2
-
-    Equipo volleyballCali("Volleyball");
-    volleyballCali.agregarJugadores({jugadores[0], jugadores[8], jugadores[11], jugadores[5]}); // IDs 1, 9, 12 y 6
-
-    // Crear equipos para la sede de Medellín
-    Equipo futbolMedellin("Futbol");
-    futbolMedellin.agregarJugadores({jugadores[10], jugadores[7], jugadores[6]}); // IDs 11, 8 y 7
-
-    Equipo volleyballMedellin("Volleyball");
-    volleyballMedellin.agregarJugadores({jugadores[2], jugadores[3], jugadores[4]}); // IDs 3, 4 y 5
-
-    // Crear sedes
-    Sede sedeCali("Cali");
-    sedeCali.equipos.push_back(futbolCali);
-    sedeCali.equipos.push_back(volleyballCali);
-
-    Sede sedeMedellin("Medellín");
-    sedeMedellin.equipos.push_back(futbolMedellin);
-    sedeMedellin.equipos.push_back(volleyballMedellin);
-
-    // Crear la asociación y agregar las sedes
-    Asociacion asociacion;
-    asociacion.sedes.push_back(sedeCali);
-    asociacion.sedes.push_back(sedeMedellin);
-
-    return 0;
-}
-
+asociacion.sedes.extend([sedeCali, sedeMedellin])
 ```
 La salida de esta instancia debería ser:
-```C++
-Equipo& futbolMedellin = asociacion.sedes[1].equipos[0] //> {7, 8, 11}
-Equipo& volleyballMedellin = asociacion.sedes[1].equipos[1] //> {3, 5, 4}
+```Python
+futbolMedellin = asociacion.sedes[1].equipos[0]  # > {6, 7, 10}
+volleyballMedellin = asociacion.sedes[1].equipos[1]  # > {2, 4, 3}
 
-Equipo& futbolCali = asociacion.sedes[0].equipos[0] //> {6,1,12,9}
-Equipo& volleyballCali = asociacion.sedes[0].equipos[1] //> {2,10}
+futbolCali = asociacion.sedes[0].equipos[0]  # > {5, 0, 11, 8}
+volleyballCali = asociacion.sedes[0].equipos[1]  # > {1, 9}
 
-// Si se supone un método en Asociacion para el ranking de jugadores:
-asociacion.ranking_jugadores() //>{3, 2, 7, 6, 5, 10, 1, 4, 12, 8, 11, 9}
+# Obtener ranking de jugadores
+ranking = asociacion.ranking_jugadores()  # > {2, 1, 6, 5, 4, 9, 0, 3, 11, 7, 10, 8}
 ```
 Además de esto la asosiación, también necesita obtener algunos datos como:
 * Equipo con menor rendimiento.
