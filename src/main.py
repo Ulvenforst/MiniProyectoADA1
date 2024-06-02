@@ -1,7 +1,7 @@
 ################################################################################
 # Archivo: main.py                                                             # 
 # Autores: Julián Ernesto Puyo Mora 2226905                                    #
-#          Laura Camila Betancourt Horta 222____                               #
+#          Laura Camila Betancourt Horta 2223435                               #
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
