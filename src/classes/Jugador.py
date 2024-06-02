@@ -1,3 +1,18 @@
+################################################################################
+# Archivo: Jugador.py                                                          #
+# Autores: Julián Ernesto Puyo Mora 2226905                                    #
+#          Laura Camila Betancourt Horta 2223435                               #
+#          Jhoan Felipe León Correa 2228527                                    #
+#          Juan Camilo Narváez Tascón 2140112                                  #
+# Fecha de creación: 06/02/2024                                                #
+# Fecha de última modificación: 06/02/2024                                     #
+# Licencia: GNU-GPL                                                            #
+################################################################################
+
+# CLASE: Jugador
+# INTENCIÓN: Representar un jugador de un equipo.
+# RELACIONES: Esta clase no tiene relaciones con otras clases.
+
 class Jugador:
     contador = 0  # Contador automático
     def __init__(self, nombre, edad, rendimiento):
@@ -34,4 +49,5 @@ class Jugador:
     @rendimiento.setter
     def rendimiento(self, rendimiento):
         self._rendimiento = rendimiento
+
 

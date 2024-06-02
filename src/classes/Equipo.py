@@ -1,3 +1,18 @@
+################################################################################
+# Archivo: Equipo.py                                                           #
+# Autores: Julián Ernesto Puyo Mora 2226905                                    #
+#          Laura Camila Betancourt Horta 2223435                               #
+#          Jhoan Felipe León Correa 2228527                                    #
+#          Juan Camilo Narváez Tascón 2140112                                  #
+# Fecha de creación: 06/02/2024                                                #
+# Fecha de última modificación: 06/02/2024                                     #
+# Licencia: GNU-GPL                                                            #
+################################################################################
+
+# CLASE: Equipo 
+# INTENCIÓN: Representar un equipo de un deporte en una sede.
+# RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
+
 M = 2      # Número máximo de equipos por sede
 K = 2      # Número máximo de sedes en la asociación
 N_min = 2  # Número mínimo de jugadores por equipo
