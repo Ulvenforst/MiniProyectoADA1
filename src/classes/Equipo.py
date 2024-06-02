@@ -15,3 +15,19 @@ class Equipo:
         self._jugadores.extend(nuevos_jugadores)
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
+
+    @property
+    def deporte(self):
+        return self._deporte
+
+    @property
+    def jugadores(self):
+        return self._jugadores
+
+    @deporte.setter
+    def deporte(self, deporte):
+        self._deporte = deporte
+
+    @jugadores.setter
+    def jugadores(self, jugadores):
+        self._jugadores = jugadores

@@ -10,3 +10,8 @@ class Asociacion:
         # Supongamos que el ranking es simplemente por identificador
         jugadores.sort(key=lambda jugador: jugador.identificador)  # Esto debe implementarse
         return [jugador.identificador for jugador in jugadores]
+
+    @property
+    def sedes(self):
+        return self._sedes
+
