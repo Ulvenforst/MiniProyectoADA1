@@ -36,19 +36,38 @@ if __name__ == "__main__":
     ]
     
     # Crear equipos y sedes
-    futbolCali = Equipo("Futbol")
+    futbolCali = Equipo("Futbol Cali")
     futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
-    volleyballCali = Equipo("Volleyball")
+    #futbolCali.ranking_jugadores()
+
+    volleyballCali = Equipo("Volleyball Cali")
     volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
-    
-    futbolMedellin = Equipo("Futbol")
-    futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
-    volleyballMedellin = Equipo("Volleyball")
-    volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
+    #volleyballCali.ranking_jugadores()
     
     sedeCali = Sede("Cali")
-    sedeCali.equipos.extend([futbolCali, volleyballCali])
-    sedeMedellin = Sede("Medellín")
-    sedeMedellin.equipos.extend([futbolMedellin, volleyballMedellin])
+    sedeCali.agregar_equipos([futbolCali, volleyballCali])
+    #sedeCali.ranking_equipos()
     
-    asociacion.sedes.extend([sedeCali, sedeMedellin])
+
+    futbolMedellin = Equipo("Futbol Medellin")
+    futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
+    #futbolMedellin.ranking_jugadores()
+
+    volleyballMedellin = Equipo("Volleyball Medellin")
+    volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
+    #volleyballMedellin.ranking_jugadores()
+    
+    sedeMedellin = Sede("Medellín")
+    sedeMedellin.agregar_equipos([futbolMedellin, volleyballMedellin])
+    #sedeMedellin.ranking_equipos()
+    
+    asociacion.agregar_sede([sedeCali, sedeMedellin])
+
+    #asociacion.jugador_mayor_rendimiento()
+    #asociacion.jugador_menor_rendimiento()
+    #asociacion.equipo_mayor_rendimiento()
+    #asociacion.equipo_menor_rendimiento()
+    #asociacion.jugador_mayor_edad()
+    #asociacion.jugador_menor_edad()
+    #asociacion.promedio_rendimiento()
+    #asociacion.promedio_edad()

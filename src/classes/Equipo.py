@@ -13,6 +13,9 @@
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
 
+from .ArbolRojiNegro import ArbolRojiNegro
+from .Nodo import Nodo
+
 M = 2      # Número máximo de equipos por sede
 K = 2      # Número máximo de sedes en la asociación
 N_min = 2  # Número mínimo de jugadores por equipo
@@ -22,14 +25,24 @@ class Equipo:
     def __init__(self, deporte):
         self._deporte = deporte
         self._jugadores = []
+        self._arbol_jugadores = ArbolRojiNegro()
+        self._arbol_jugadores_edad = ArbolRojiNegro()
 
     def agregar_jugadores(self, nuevos_jugadores):
         if len(self._jugadores) + len(nuevos_jugadores) > N_max:
             print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
             return
         self._jugadores.extend(nuevos_jugadores)
+
+        for jugador in nuevos_jugadores:
+            self._arbol_jugadores.insertar(Nodo(jugador.identificador, jugador.rendimiento, jugador.edad))
+            self._arbol_jugadores_edad.insertar(Nodo(jugador.identificador, jugador.edad, jugador.rendimiento))
+            
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
+
+    def ranking_jugadores(self):
+        print(self._arbol_jugadores.in_orden())
 
     @property
     def deporte(self):
