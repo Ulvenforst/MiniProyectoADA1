@@ -37,11 +37,8 @@ class Equipo:
             print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
             return
         
-        max_edad = max(jugador.edad for jugador in nuevos_jugadores)
-        nuevos_jugadores = counting_sort(nuevos_jugadores, max_edad, key=lambda x: x.edad)
-
-        max_rendimiento = max(jugador.rendimiento for jugador in nuevos_jugadores)
-        nuevos_jugadores = counting_sort(nuevos_jugadores, max_rendimiento, key=lambda x: x.rendimiento)
+        nuevos_jugadores = counting_sort(nuevos_jugadores, key=lambda x: x.edad, reverse=True)
+        nuevos_jugadores = counting_sort(nuevos_jugadores, key=lambda x: x.rendimiento)
 
         for orden_rendimiento, jugador in enumerate(nuevos_jugadores):
             self._hash_jugadores.insert(orden_rendimiento, jugador)
@@ -74,7 +71,7 @@ class Equipo:
 
     @property
     def rendimiento_promedio(self):
-        return int(self._rendimiento_promedio)
+        return self._rendimiento_promedio
     
     @property
     def numero_jugadores(self):

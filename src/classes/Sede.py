@@ -16,7 +16,7 @@
 M = 2      # Número máximo de equipos por sede
 
 from classes.TablaHash import HashTable
-from algorithms.counting_sort import counting_sort
+from algorithms.counting_sort import counting_sort, bucket_sort
 
 class Sede:
     def __init__(self, nombre):
@@ -30,11 +30,8 @@ class Sede:
             print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de equipos.")
             return
         
-        max_num_jugadores = max(equipo.numero_jugadores for equipo in nuevos_equipos)
-        nuevos_equipos = counting_sort(nuevos_equipos, max_num_jugadores, key=lambda x: x.numero_jugadores)
-
-        max_rendimiento = max(equipo.rendimiento_promedio for equipo in nuevos_equipos)
-        nuevos_equipos = counting_sort(nuevos_equipos, max_rendimiento, key=lambda x: x.rendimiento_promedio)
+        nuevos_equipos = counting_sort(nuevos_equipos, key=lambda x: x.numero_jugadores, reverse=True)
+        nuevos_equipos = bucket_sort(nuevos_equipos, key=lambda x: x.rendimiento_promedio)
 
         for orden_rendimiento, equipo in enumerate(nuevos_equipos):
             self._hash_equipos.insert(orden_rendimiento, equipo)
@@ -62,4 +59,4 @@ class Sede:
 
     @property
     def rendimiento_promedio(self):
-        return int(self._rendimiento_promedio)
+        return self._rendimiento_promedio
