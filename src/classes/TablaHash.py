@@ -1,5 +1,5 @@
 ################################################################################
-# Archivo: TablaHash.py                                                       #
+# Archivo: TablaHash.py                                                        #
 # Autores: Julián Ernesto Puyo Mora 2226905                                    #
 #          Laura Camila Betancourt Horta 2223435                               #
 #          Jhoan Felipe León Correa 2228527                                    #
@@ -13,14 +13,13 @@
 # INTENCIÓN: Representar una asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Sede; una asociación tiene varias sedes.
 
-
 class HashTable:
     def __init__(self, size):
         self.size = size
         self.table = [LinkedList() for _ in range(size)]
 
     def hash_function(self, key):
-        return hash(key) % self.size
+        return key % self.size
 
     def insert(self, key, value):
         index = self.hash_function(key)
@@ -39,6 +38,21 @@ class HashTable:
         index = self.hash_function(key)
         return self.table[index].delete(key)
 
+    def __iter__(self):
+        for linked_list in self.table:
+            current = linked_list.head
+            while current:
+                yield current.key, current.value
+                current = current.next
+
+    def len(self):
+        count = 0
+        for linked_list in self.table:
+            current = linked_list.head
+            while current:
+                count += 1
+                current = current.next
+        return count
 
 class LinkedList:
     def __init__(self):

@@ -23,9 +23,8 @@
 from classes import Asociacion, Jugador, Equipo, Sede
 
 if __name__ == "__main__":
-    asociacion = Asociacion()
-    
-    # Crear jugadores
+    # asociacion = Asociacion()
+
     jugadores = [
         Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
         Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
@@ -37,18 +36,38 @@ if __name__ == "__main__":
     
     # Crear equipos y sedes
     futbolCali = Equipo("Futbol")
-    futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
-    volleyballCali = Equipo("Volleyball")
-    volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
+    futbolCali.agregar_jugadores([jugadores[0], jugadores[1], jugadores[2], jugadores[3]])
+
+    for jugador in futbolCali.jugadores:
+        print(jugador[0], jugador[1].nombre, jugador[1].rendimiento)
     
-    futbolMedellin = Equipo("Futbol")
-    futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
-    volleyballMedellin = Equipo("Volleyball")
-    volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
+    # # Crear jugadores
+    # jugadores = [
+    #     Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
+    #     Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
+    #     Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
+    #     Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
+    #     Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
+    #     Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
+    # ]
     
-    sedeCali = Sede("Cali")
-    sedeCali.equipos.extend([futbolCali, volleyballCali])
-    sedeMedellin = Sede("Medellín")
-    sedeMedellin.equipos.extend([futbolMedellin, volleyballMedellin])
+    # # Crear equipos y sedes
+    # futbolCali = Equipo("Futbol")
+    # futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
+    # volleyballCali = Equipo("Volleyball")
+    # volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
     
-    asociacion.sedes.extend([sedeCali, sedeMedellin])
+    # futbolMedellin = Equipo("Futbol")
+    # futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
+    # volleyballMedellin = Equipo("Volleyball")
+    # volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
+    
+    # sedeCali = Sede("Cali")
+    # sedeCali.equipos.extend([futbolCali, volleyballCali])
+    # sedeMedellin = Sede("Medellín")
+    # sedeMedellin.equipos.extend([futbolMedellin, volleyballMedellin])
+    
+    # asociacion.sedes.extend([sedeCali, sedeMedellin])
+
+    # print(futbolCali._hash_jugadores)
+
