@@ -12,7 +12,8 @@
 # CLASE: Equipo 
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
-from TablaHash import HashTable
+import math
+from .TablaHash import HashTable
 # Make an absolute import to the counting_sort function in ../algorithms/
 
 from algorithms.counting_sort import counting_sort
@@ -28,22 +29,28 @@ class Equipo:
         self._deporte = deporte
         self._jugadores = []
         self._hash_jugadores = HashTable(N_max)
+        self._rendimiento_promedio = 0
+        self._numero_jugadores = 0
 
     def agregar_jugadores(self, nuevos_jugadores):
         if len(self._jugadores) + len(nuevos_jugadores) > N_max:
             print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
             return
-        self._jugadores.extend(nuevos_jugadores)
-
-        max_rendimiento = max(jugador.rendimiento for jugador in nuevos_jugadores)
+        
         max_edad = max(jugador.edad for jugador in nuevos_jugadores)
         nuevos_jugadores = counting_sort(nuevos_jugadores, max_edad, key=lambda x: x.edad)
+
+        max_rendimiento = max(jugador.rendimiento for jugador in nuevos_jugadores)
         nuevos_jugadores = counting_sort(nuevos_jugadores, max_rendimiento, key=lambda x: x.rendimiento)
 
-        orden_rendimiento = 0
-        for jugador in nuevos_jugadores:
+        for orden_rendimiento, jugador in enumerate(nuevos_jugadores):
             self._hash_jugadores.insert(orden_rendimiento, jugador)
-            orden_rendimiento += 1
+
+        for jugador in self._hash_jugadores:
+            self._rendimiento_promedio += jugador[1].rendimiento
+        self._rendimiento_promedio /= self._hash_jugadores.len()
+
+        self._numero_jugadores = self._hash_jugadores.len()
 
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
@@ -65,33 +72,10 @@ class Equipo:
     def jugadores(self, jugadores):
         self._jugadores = jugadores
 
-
-if __name__ == "__main__":
-    from Jugador import Jugador
-
-    jugadores = [
-        Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
-        Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
-        Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
-        Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
-        Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
-        Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
-    ]
+    @property
+    def rendimiento_promedio(self):
+        return int(self._rendimiento_promedio)
     
-    # Crear equipos y sedes
-    futbolCali = Equipo("Futbol")
-    futbolCali.agregar_jugadores([jugadores[0], jugadores[1], jugadores[2], jugadores[3]])
-
-    for jugador in futbolCali.jugadores:
-        print(jugador[0], jugador[1].nombre, jugador[1].rendimiento)
-
-    # print(futbolCali.jugadores.search(futbolCali.jugadores.len()-1).nombre)
-
-    # volleyballCali = Equipo("Volleyball")
-    # volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
-    
-    # futbolMedellin = Equipo("Futbol")
-    # futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
-    # volleyballMedellin = Equipo("Volleyball")
-    # volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
-    
+    @property
+    def numero_jugadores(self):
+        return self._numero_jugadores
