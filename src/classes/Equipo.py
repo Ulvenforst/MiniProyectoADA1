@@ -52,6 +52,18 @@ class Equipo:
     def __str__(self):
         return f"Equipo de {self._deporte} - Rendimiento promedio: {self._rendimiento_promedio}"
 
+    def __lt__(self, other):
+        return self._rendimiento_promedio < other._rendimiento_promedio
+
+    def __le__(self, other):
+        return self._rendimiento_promedio <= other._rendimiento_promedio
+
+    def __gt__(self, other):
+        return self._rendimiento_promedio > other._rendimiento_promedio
+
+    def __ge__(self, other):
+        return self._rendimiento_promedio >= other._rendimiento_promedio
+
     @property
     def deporte(self):
         return self._deporte

@@ -35,36 +35,22 @@ class Asociacion:
         for orden_rendimiento, sede in enumerate(nuevas_sedes):
             self._hash_sedes.insert(orden_rendimiento, sede)
 
-    def ranking_jugadores(self): # REVISAR PARA DEPURAR
-        jugadores = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                for jugador in equipo[1].jugadores:
-                    jugadores.append(jugador[1])
-
-        jugadores = bucket_sort(jugadores, key=lambda x: x.rendimiento)
+    def ranking_jugadores(self):
+        jugadores = self.obtener_jugadores()
+        jugadores = self.ordenar_entidades(jugadores, key='rendimiento')
         for orden_rendimiento, jugador in enumerate(jugadores):
             self._hash_jugadores.insert(orden_rendimiento, jugador)
-
         return self._hash_jugadores
 
-    def equipo_con_menor_rendimiento(self): # REVISAR PARA DEPURAR
-        equipos = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                equipos.append(equipo[1])
-
-        equipos = bucket_sort(equipos, key=lambda x: x.rendimiento_promedio)
+    def equipo_con_menor_rendimiento(self):
+        equipos = self.obtener_equipos()
+        equipos = self.ordenar_entidades(equipos, key='rendimiento_promedio')
         return equipos[0]
 
-    def equipo_con_mayor_rendimiento(self): # REVISAR PARA DEPURAR
-        equipos = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                equipos.append(equipo[1])
-
-        equipos = bucket_sort(equipos, key=lambda x: x.rendimiento_promedio)
-        return equipos[-1]
+    def equipo_con_mayor_rendimiento(self):
+        equipos = self.obtener_equipos()
+        equipos = self.ordenar_entidades(equipos, key='rendimiento_promedio', reverse=True)
+        return equipos[0]
 
     def jugador_con_mejor_rendimiento(self):
         jugadores = self.ranking_jugadores()
@@ -74,24 +60,14 @@ class Asociacion:
         jugadores = self.ranking_jugadores()
         return jugadores.search(0)
 
-    def jugador_mas_viejo(self): # REVISAR PARA DEPURAR
-        jugadores = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                for jugador in equipo[1].jugadores:
-                    jugadores.append(jugador[1])
-
-        jugadores = counting_sort(jugadores, key=lambda x: x.edad)
-        return jugadores[-1]
-
-    def jugador_mas_joven(self): # REVISAR PARA DEPURAR
-        jugadores = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                for jugador in equipo[1].jugadores:
-                    jugadores.append(jugador[1])
-
-        jugadores = counting_sort(jugadores, key=lambda x: x.edad)
+    def jugador_mas_viejo(self):
+        jugadores = self.obtener_jugadores()
+        jugadores = self.ordenar_entidades(jugadores, key='edad', reverse=True)
+        return jugadores[0]
+    
+    def jugador_mas_joven(self):
+        jugadores = self.obtener_jugadores()
+        jugadores = self.ordenar_entidades(jugadores, key='edad')
         return jugadores[0]
 
     def promedio_edad_jugadores(self):
@@ -105,4 +81,22 @@ class Asociacion:
     @property
     def sedes(self):
         return self._hash_sedes
+
+    def obtener_jugadores(self):
+        jugadores = []
+        for sede in self._hash_sedes:
+            for equipo in sede[1].equipos:
+                jugadores.extend([jugador[1] for jugador in equipo[1].jugadores])
+        return jugadores
+
+    def obtener_equipos(self):
+        equipos = []
+        for sede in self._hash_sedes:
+            equipos.extend([equipo[1] for equipo in sede[1].equipos])
+        return equipos
+
+    def ordenar_entidades(self, entidades, key, reverse=False):
+        if key in ['rendimiento', 'edad']:
+            return counting_sort(entidades, key=lambda x: getattr(x, key), reverse=reverse)
+        return bucket_sort(entidades, key=lambda x: getattr(x, key), reverse=reverse)
 

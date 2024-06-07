@@ -24,24 +24,39 @@ def counting_sort(array, key=lambda x: x, reverse=False):
 
     return sorted_array
 
-def bucket_sort(array, key=lambda x: x):
+def bucket_sort(array, key=lambda x: x, reverse=False):
     if not array:
-        return []
-
-    num_buckets = len(array)
-    buckets = [[] for _ in range(num_buckets)]
-
+        return array
     min_value = min(key(item) for item in array)
     max_value = max(key(item) for item in array)
-    range_value = 1 if max_value == min_value else max_value - min_value
-
+    bucket_size = (max_value - min_value) // len(array) + 1
+    bucket_count = (max_value - min_value) // bucket_size + 1
+    buckets = [[] for _ in range(int(bucket_count))]
     for item in array:
-        normalized_value = (key(item) - min_value) / range_value
-        bucket_index = min(num_buckets - 1, int(num_buckets * normalized_value))
-        buckets[bucket_index].append(item)
+        normalized_key = key(item)
+        index = (normalized_key - min_value) // bucket_size
+        buckets[int(index)].append(item)
+    index = 0
+    if reverse:
+        for bucket in reversed(buckets):
+            insertion_sort(bucket, reverse=True)
+            for item in bucket: 
+                array[index] = item
+                index += 1
+    else:
+        for bucket in buckets:
+            insertion_sort(bucket, reverse=False)
+            for item in bucket:
+                array[index] = item
+                index += 1
+    return array
 
-    sorted_array = []
-    for bucket in buckets:
-        sorted_array.extend(sorted(bucket, key=key))
+def insertion_sort(array, reverse=False):
+    for i in range(1, len(array)):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and ((array[j] > key if not reverse else array[j] < key)):
+            array[j + 1] = array[j]
+            j -= 1
+        array[j + 1] = key
 
-    return sorted_array
