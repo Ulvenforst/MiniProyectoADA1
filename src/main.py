@@ -53,73 +53,43 @@ if __name__ == "__main__":
 
     asociacion.agregar_sedes([sedeCali, sedeMedellin])
     
-    # # Imprimir los jugadores del equipo de futbol de medellin
-    # print("Jugadores del equipo de futbol de Medellín:")
-    # for jugador in futbolMedellin.jugadores:
-    #     print(jugador[1].identificador)
-
-    # print()
-    # # Imprimir los jugadores del equipo de volleyball de medellin
-    # print("Jugadores del equipo de volleyball de Medellín:")
-    # for jugador in volleyballMedellin.jugadores:
-    #     print(jugador[1].identificador)
-
-    # print()
-    # # Imprimir los jugadores del equipo de futbol de cali
-    # print("Jugadores del equipo de futbol de Cali:")
-    # for jugador in futbolCali.jugadores:
-    #     print(jugador[1].identificador)
-
-    # print()
-    # # Imprimir los jugadores del equipo de volleyball de cali
-    # print("Jugadores del equipo de volleyball de Cali:")
-    # for jugador in volleyballCali.jugadores:
-    #     print(jugador[1].identificador)
-
-    # print()
-    # # Imprimir el ranking de jugadores de la asociacion
-    # print("Ranking de jugadores de la asociación:")
-    # for jugador in asociacion.ranking_jugadores():
-    #     print(jugador[1].identificador)
-
-    # print()
-    # Imprimir el equipo con mayor rendimiento
+    print("-------------------")
+    print("Jugadores del equipo de futbol de Medellín:")
+    print(futbolMedellin.jugadores)
+    print("-------------------")
+    print("Jugadores del equipo de volleyball de Medellín:")
+    print(volleyballMedellin.jugadores)
+    print("-------------------")
+    print("Jugadores del equipo de futbol de Cali:")
+    print(futbolCali.jugadores)
+    print("-------------------")
+    print("Jugadores del equipo de volleyball de Cali:")
+    print(volleyballCali.jugadores)
+    print("-------------------")
+    print("Ranking de jugadores de la asociación:")
+    print(asociacion.ranking_jugadores())
+    print("-------------------")
     print("Equipo con menor rendimiento promedio:")
-    print(asociacion.equipo_con_mayor_rendimiento().deporte)
-
-
-    # print()
-    # Imprimir el equipo con menor rendimiento
+    print(asociacion.equipo_con_menor_rendimiento())
+    print("-------------------")
     print("Equipo con mayor rendimiento promedio:")
-    print(asociacion.equipo_con_menor_rendimiento().deporte)
-
-    # print()
-    # Imprimir el jugador con mayor rendimiento
+    print(asociacion.equipo_con_mayor_rendimiento())
+    print("-------------------")
     print("Jugador con mejor rendimiento:")
-    print(asociacion.jugador_con_mejor_rendimiento().identificador)
-
-    # print()
-    # Imprimir el jugador con menor rendimiento
+    print(asociacion.jugador_con_mejor_rendimiento())
+    print("-------------------")
     print("Jugador con peor rendimiento:")
-    print(asociacion.jugador_con_peor_rendimiento().identificador)
-
-    # print()
-    # Imprimir el jugador con menor edad
+    print(asociacion.jugador_con_peor_rendimiento())
+    print("-------------------")
     print("Jugador más joven:")
-    print(asociacion.jugador_mas_joven().identificador)
-
-    # print()
-    # Imprimir el jugador con mayor edad
+    print(asociacion.jugador_mas_joven())
+    print("-------------------")
     print("Jugador más viejo:")
-    print(asociacion.jugador_mas_viejo().identificador)
-
-    # print()
-    # Imprimir el promedio de edad de los jugadores
+    print(asociacion.jugador_mas_viejo())
+    print("-------------------")
     print("Promedio de edad de los jugadores:")
     print(asociacion.promedio_edad_jugadores())
-
-    # print()
-    # Imprimir el promedio de rendimiento de los jugadores
+    print("-------------------")
     print("Promedio de rendimiento de los jugadores:")
     print(asociacion.promedio_rendimiento_jugadores())
 

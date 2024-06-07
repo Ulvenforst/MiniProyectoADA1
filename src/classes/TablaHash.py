@@ -54,6 +54,15 @@ class HashTable:
                 current = current.next
         return count
 
+    def __str__(self):
+        result = ""
+        for linked_list in self.table:
+            current = linked_list.head
+            while current:
+                result += f"\t{current.value}\n"
+                current = current.next
+        return result
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -84,7 +93,7 @@ class LinkedList:
             prev = current
             current = current.next
         return False
-
+    
 class Node:
     def __init__(self, key, value):
         self.key = key

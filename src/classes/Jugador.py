@@ -22,6 +22,9 @@ class Jugador:
         self._edad = edad
         self._rendimiento = rendimiento
 
+    def __str__(self):
+        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
+
     @property
     def identificador(self):
         return self._identificador

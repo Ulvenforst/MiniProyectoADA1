@@ -47,6 +47,9 @@ class Equipo:
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
 
+    def __str__(self):
+        return f"Equipo de {self._deporte} - Rendimiento promedio: {self._rendimiento_promedio}"
+
     @property
     def deporte(self):
         return self._deporte
