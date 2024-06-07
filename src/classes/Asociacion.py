@@ -35,7 +35,7 @@ class Asociacion:
         for orden_rendimiento, sede in enumerate(nuevas_sedes):
             self._hash_sedes.insert(orden_rendimiento, sede)
 
-    def ranking_jugadores(self):
+    def ranking_jugadores(self): # REVISAR PARA DEPURAR
         jugadores = []
         for sede in self._hash_sedes:
             for equipo in sede[1].equipos:
@@ -48,7 +48,7 @@ class Asociacion:
 
         return self._hash_jugadores
 
-    def equipo_con_menor_rendimiento(self):
+    def equipo_con_menor_rendimiento(self): # REVISAR PARA DEPURAR
         equipos = []
         for sede in self._hash_sedes:
             for equipo in sede[1].equipos:
@@ -57,7 +57,7 @@ class Asociacion:
         equipos = bucket_sort(equipos, key=lambda x: x.rendimiento_promedio)
         return equipos[0]
 
-    def equipo_con_mayor_rendimiento(self):
+    def equipo_con_mayor_rendimiento(self): # REVISAR PARA DEPURAR
         equipos = []
         for sede in self._hash_sedes:
             for equipo in sede[1].equipos:
@@ -74,7 +74,7 @@ class Asociacion:
         jugadores = self.ranking_jugadores()
         return jugadores.search(0)
 
-    def jugador_mas_viejo(self):
+    def jugador_mas_viejo(self): # REVISAR PARA DEPURAR
         jugadores = []
         for sede in self._hash_sedes:
             for equipo in sede[1].equipos:
@@ -84,7 +84,7 @@ class Asociacion:
         jugadores = counting_sort(jugadores, key=lambda x: x.edad)
         return jugadores[-1]
 
-    def jugador_mas_joven(self):
+    def jugador_mas_joven(self): # REVISAR PARA DEPURAR
         jugadores = []
         for sede in self._hash_sedes:
             for equipo in sede[1].equipos:
