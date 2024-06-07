@@ -28,15 +28,56 @@ class Sede:
 
     @manage_insertions(M, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'equipos')
     def agregar_equipos(self, nuevos_equipos):
+        """
+        Agrega equipos a la sede.
+
+        Args:
+            nuevos_equipos (list): Lista de equipos a agregar.
+
+        Returns:
+            None
+        """
         self._rendimiento_promedio = sum(e[1].rendimiento_promedio for e in self._hash_equipos) / self._hash_equipos.len()
 
     @property
     def nombre(self):
+        """
+        Getter del atributo nombre.
+
+        Returns:
+            str: Nombre de la sede.
+        """
         return self._nombre
     
     @property
     def equipos(self):
+        """
+        Getter del atributo equipos.
+
+        Returns:
+            HashTable: Tabla hash de equipos.
+        """
         return self._hash_equipos
+
+    @property
+    def rendimiento_promedio(self):
+        """
+        Getter del atributo rendimiento_promedio.
+
+        Returns:
+            float: Rendimiento promedio de los equipos de la sede.
+        """
+        return self._rendimiento_promedio
+    
+    @property
+    def numero_jugadores(self):
+        """
+        Getter del atributo numero_jugadores.
+
+        Returns:
+            int: Número de jugadores de la sede.
+        """
+        return self._numero_jugadores
 
     @nombre.setter
     def nombre(self, nombre):
@@ -45,12 +86,3 @@ class Sede:
     @equipos.setter
     def equipos(self, equipos):
         self._equipos = equipos
-
-    @property
-    def rendimiento_promedio(self):
-        return self._rendimiento_promedio
-    
-    @property
-    def numero_jugadores(self):
-        return self._numero_jugadores
-

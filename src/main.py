@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/02/2024                                     #
+# Fecha de última modificación: 06/06/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -69,11 +69,11 @@ if __name__ == "__main__":
     print("Ranking de jugadores de la asociación:")
     print(asociacion.ranking_jugadores())
     print("-------------------")
-    print("Equipo con menor rendimiento promedio:")
-    print(asociacion.equipo_con_menor_rendimiento())
-    print("-------------------")
     print("Equipo con mayor rendimiento promedio:")
     print(asociacion.equipo_con_mayor_rendimiento())
+    print("-------------------")
+    print("Equipo con menor rendimiento promedio:")
+    print(asociacion.equipo_con_menor_rendimiento())
     print("-------------------")
     print("Jugador con mejor rendimiento:")
     print(asociacion.jugador_con_mejor_rendimiento())

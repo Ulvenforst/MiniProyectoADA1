@@ -13,7 +13,6 @@
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
 
-
 from data_structures.TablaHash import HashTable
 from utils.decorators import manage_insertions
 
@@ -30,8 +29,68 @@ class Equipo:
 
     @manage_insertions(N_max, [('edad', True), ('rendimiento', False)], 'jugadores')
     def agregar_jugadores(self, nuevos_jugadores):
+        """
+        Agrega jugadores al equipo.
+
+        Args:
+            nuevos_jugadores (list): Lista de jugadores a agregar.
+
+        Returns:
+            None
+        """
         self._rendimiento_promedio = sum(j[1].rendimiento for j in self._hash_jugadores) / self._hash_jugadores.len()
 
+    @property
+    def deporte(self):
+        """
+        Getter del atributo deporte.
+
+        Returns:
+            str: Deporte del equipo.
+        """
+        return self._deporte
+
+    @property
+    def jugadores(self):
+        """
+        Getter del atributo jugadores.
+
+        Returns:
+            HashTable: Tabla hash de jugadores.
+
+        """
+        # return self._jugadores
+        return self._hash_jugadores
+
+    @property
+    def rendimiento_promedio(self):
+        """
+        Getter del atributo rendimiento_promedio.
+
+        Returns:
+            float: Rendimiento promedio de los jugadores del equipo.
+        """
+        return self._rendimiento_promedio
+
+    @property
+    def numero_jugadores(self):
+        """
+        Getter del atributo numero_jugadores.
+
+        Returns:
+            int: Número de jugadores del equipo.
+        """
+        return self._numero_jugadores
+
+    @deporte.setter
+    def deporte(self, deporte):
+        self._deporte = deporte
+
+    @jugadores.setter
+    def jugadores(self, jugadores):
+        self._jugadores = jugadores
+    
+    # Métodos mágicos:
     def __str__(self):
         return f"Equipo de {self._deporte} - Rendimiento promedio: {self._rendimiento_promedio}"
 
@@ -46,29 +105,3 @@ class Equipo:
 
     def __ge__(self, other):
         return self._rendimiento_promedio >= other._rendimiento_promedio
-
-    @property
-    def deporte(self):
-        return self._deporte
-
-    @property
-    def jugadores(self):
-        # return self._jugadores
-        return self._hash_jugadores
-
-    @deporte.setter
-    def deporte(self, deporte):
-        self._deporte = deporte
-
-    @jugadores.setter
-    def jugadores(self, jugadores):
-        self._jugadores = jugadores
-
-    @property
-    def rendimiento_promedio(self):
-        return self._rendimiento_promedio
-
-    @property
-    def numero_jugadores(self):
-        return self._numero_jugadores
-    

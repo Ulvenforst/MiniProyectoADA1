@@ -22,23 +22,44 @@ class Jugador:
         self._edad = edad
         self._rendimiento = rendimiento
 
-    def __str__(self):
-        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
-
     @property
     def identificador(self):
+        """
+        Getter del atributo identificador.
+
+        Returns:
+            int: Identificador del jugador.
+        """
         return self._identificador
 
     @property
     def nombre(self):
+        """
+        Getter del atributo nombre.
+
+        Returns:
+            str: Nombre del jugador.
+        """
         return self._nombre
 
     @property
     def edad(self):
+        """
+        Getter del atributo edad.
+
+        Returns:
+            int: Edad del jugador.
+        """
         return self._edad
 
     @property
     def rendimiento(self):
+        """
+        Getter del atributo rendimiento.
+
+        Returns:
+            float: Rendimiento del jugador.
+        """
         return self._rendimiento
 
     @nombre.setter
@@ -52,3 +73,7 @@ class Jugador:
     @rendimiento.setter
     def rendimiento(self, rendimiento):
         self._rendimiento = rendimiento
+
+    # Métodos mágicos:
+    def __str__(self):
+        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"

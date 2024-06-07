@@ -1,4 +1,29 @@
+################################################################################
+# Archivo: sorting_algorithms.py                                               #
+# Autores: Julián Ernesto Puyo Mora 2226905                                    #
+#          Laura Camila Betancourt Horta 2223435                               #
+#          Jhoan Felipe León Correa 2228527                                    #
+#          Juan Camilo Narváez Tascón 2140112                                  #
+# Fecha de creación: 06/06/2024                                                #
+# Fecha de última modificación: 06/06/2024                                     #
+# Licencia: GNU-GPL                                                            #
+################################################################################
+
+# HISTORIA: Este módulo contiene los algoritmos de ordenamiento que se utilizan en los decoradores
+# para ordenar las entidades de la asociación.
+
 def counting_sort(array, key=lambda x: x, reverse=False):
+    """
+    Ordena un arreglo de elementos utilizando el algoritmo de ordenamiento Counting Sort.
+
+    Args:
+        array (list): Arreglo de elementos a ordenar.
+        key (function, optional): Función que define la clave por la que se ordenarán los elementos. Por defecto es la identidad.
+        reverse (bool, optional): Si se ordenarán de forma ascendente o descendente. Por defecto es False.
+
+    Returns:
+        list: Arreglo ordenado.
+    """
     max_value = max([key(value) for value in array])
     counts = [0] * (max_value + 1)
 
@@ -25,6 +50,17 @@ def counting_sort(array, key=lambda x: x, reverse=False):
     return sorted_array
 
 def bucket_sort(array, key=lambda x: x, reverse=False):
+    """
+    Ordena un arreglo de elementos utilizando el algoritmo de ordenamiento Bucket Sort.
+
+    Args:
+        array (list): Arreglo de elementos a ordenar.
+        key (function, optional): Función que define la clave por la que se ordenarán los elementos. Por defecto es la identidad.
+        reverse (bool, optional): Si se ordenarán de forma ascendente o descendente. Por defecto es False.
+
+    Returns:
+        list: Arreglo ordenado.
+    """
     if not array:
         return array
     min_value = min(key(item) for item in array)
@@ -52,6 +88,16 @@ def bucket_sort(array, key=lambda x: x, reverse=False):
     return array
 
 def insertion_sort(array, reverse=False):
+    """
+    Ordena un arreglo de elementos utilizando el algoritmo de ordenamiento Insertion Sort.
+
+    Args:
+        array (list): Arreglo de elementos a ordenar.
+        reverse (bool, optional): Si se ordenarán de forma ascendente o descendente. Por defecto es False.
+    
+    Returns:
+        None
+    """
     for i in range(1, len(array)):
         key = array[i]
         j = i - 1
