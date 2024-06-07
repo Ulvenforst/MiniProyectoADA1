@@ -23,58 +23,62 @@
 from classes import Asociacion, Jugador, Equipo, Sede
 
 if __name__ == "__main__":
-    # asociacion = Asociacion()
+    asociacion = Asociacion()
 
+    # Crear jugadores
     jugadores = [
-        Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
-        Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
-        Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
-        Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
-        Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
-        Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
+            Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
+            Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
+            Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
+            Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
+            Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
+            Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
     ]
     
     # Crear equipos y sedes
     futbolCali = Equipo("Futbol")
-    futbolCali.agregar_jugadores([jugadores[0], jugadores[1], jugadores[2], jugadores[3]])
-
-    for jugador in futbolCali.jugadores:
-        print(jugador[0], jugador[1].nombre, jugador[1].rendimiento)
-
-    print(futbolCali.rendimiento_promedio)
+    futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
+    volleyballCali = Equipo("Volleyball")
+    volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
+    
+    futbolMedellin = Equipo("Futbol")
+    futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
+    volleyballMedellin = Equipo("Volleyball")
+    volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
     
     sedeCali = Sede("Cali")
-    sedeCali.agregar_equipos([futbolCali])
+    sedeCali.agregar_equipos([futbolCali, volleyballCali])
+    sedeMedellin = Sede("Medellín")
+    sedeMedellin.agregar_equipos([futbolMedellin, volleyballMedellin])
 
-    for equipo in sedeCali.equipos:
-        print(equipo[0], equipo[1].deporte, equipo[1].rendimiento_promedio)
+    asociacion.agregar_sedes([sedeCali, sedeMedellin])
+    
+    # Imprimir los jugadores del equipo de futbol de medellin
+    print("Jugadores del equipo de futbol de Medellín:")
+    for jugador in futbolMedellin.jugadores:
+        print(jugador[1].identificador)
 
-    print(sedeCali.rendimiento_promedio)
-    # # Crear jugadores
-    # jugadores = [
-    #     Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
-    #     Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
-    #     Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
-    #     Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
-    #     Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
-    #     Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
-    # ]
-    
-    # # Crear equipos y sedes
-    # futbolCali = Equipo("Futbol")
-    # futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
-    # volleyballCali = Equipo("Volleyball")
-    # volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
-    
-    # futbolMedellin = Equipo("Futbol")
-    # futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
-    # volleyballMedellin = Equipo("Volleyball")
-    # volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
-    
-    # sedeMedellin = Sede("Medellín")
-    # sedeMedellin.agregar_equipos([futbolMedellin, volleyballMedellin])
-    
-    # asociacion.sedes.extend([sedeCali, sedeMedellin])
+    print()
+    # Imprimir los jugadores del equipo de volleyball de medellin
+    print("Jugadores del equipo de volleyball de Medellín:")
+    for jugador in volleyballMedellin.jugadores:
+        print(jugador[1].identificador)
 
-    # print(futbolCali._hash_jugadores)
+    print()
+    # Imprimir los jugadores del equipo de futbol de cali
+    print("Jugadores del equipo de futbol de Cali:")
+    for jugador in futbolCali.jugadores:
+        print(jugador[1].identificador)
+
+    print()
+    # Imprimir los jugadores del equipo de volleyball de cali
+    print("Jugadores del equipo de volleyball de Cali:")
+    for jugador in volleyballCali.jugadores:
+        print(jugador[1].identificador)
+
+    print()
+    # Imprimir el ranking de jugadores de la asociacion
+    print("Ranking de jugadores de la asociación:")
+    for jugador in asociacion.ranking_jugadores():
+        print(jugador.identificador)
 

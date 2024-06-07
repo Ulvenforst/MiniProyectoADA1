@@ -16,8 +16,6 @@
 from .TablaHash import HashTable
 from algorithms.sorting import counting_sort
 
-M = 2      # Número máximo de equipos por sede
-K = 2      # Número máximo de sedes en la asociación
 N_min = 2  # Número mínimo de jugadores por equipo
 N_max = 4  # Número máximo de jugadores por equipo
 
