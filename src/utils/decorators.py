@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/06/2024                                                #
-# Fecha de última modificación: 06/06/2024                                     #
+# Fecha de última modificación: 06/07/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -40,7 +40,7 @@ def extraer_y_ordenar(tipo_entidad, clave, reverse=False):
 
 def manage_insertions(max_size, sort_keys, entity_name):
     """
-    Decorador que gestiona la inserción de entidades en las tablas hash y las ordena según criterios específicos.
+    Decorador que gestiona la inserción de entidades en las listas y las ordena según criterios específicos.
 
     Args:
         max_size (int): Tamaño máximo permitido para la tabla hash.

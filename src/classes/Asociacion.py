@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/06/2024                                     #
+# Fecha de última modificación: 06/07/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -36,7 +36,7 @@ class Asociacion:
         """
         self.ranking_jugadores()
 
-    def ranking_jugadores(self):
+    def ranking_jugadores(self) -> list:
         """
         Obtiene el ranking de jugadores de la asociación.
 
@@ -155,8 +155,7 @@ class Asociacion:
         """
         jugadores = []
         for sede in self._list_sedes:
-            for equipo in sede.equipos:
-                jugadores.extend([jugador for jugador in equipo.jugadores])
+            for equipo in sede.equipos: jugadores.extend([jugador for jugador in equipo.jugadores])
         return jugadores
 
     def obtener_equipos(self):
@@ -167,8 +166,7 @@ class Asociacion:
             list: Lista de equipos de la asociación.
         """
         equipos = []
-        for sede in self._list_sedes:
-            equipos.extend([equipo for equipo in sede.equipos])
+        for sede in self._list_sedes: equipos.extend([equipo for equipo in sede.equipos])
         return equipos
 
     def ordenar_entidades(self, entidades, key, reverse=False):

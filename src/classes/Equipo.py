@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/06/2024                                     #
+# Fecha de última modificación: 06/07/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 

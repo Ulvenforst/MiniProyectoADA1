@@ -80,4 +80,3 @@ class Jugador:
 
     def __repr__(self):
         return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
-
