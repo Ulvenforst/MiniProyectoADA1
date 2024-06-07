@@ -40,7 +40,16 @@ if __name__ == "__main__":
 
     for jugador in futbolCali.jugadores:
         print(jugador[0], jugador[1].nombre, jugador[1].rendimiento)
+
+    print(futbolCali.rendimiento_promedio)
     
+    sedeCali = Sede("Cali")
+    sedeCali.agregar_equipos([futbolCali])
+
+    for equipo in sedeCali.equipos:
+        print(equipo[0], equipo[1].deporte, equipo[1].rendimiento_promedio)
+
+    print(sedeCali.rendimiento_promedio)
     # # Crear jugadores
     # jugadores = [
     #     Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
@@ -62,10 +71,8 @@ if __name__ == "__main__":
     # volleyballMedellin = Equipo("Volleyball")
     # volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
     
-    # sedeCali = Sede("Cali")
-    # sedeCali.equipos.extend([futbolCali, volleyballCali])
     # sedeMedellin = Sede("Medellín")
-    # sedeMedellin.equipos.extend([futbolMedellin, volleyballMedellin])
+    # sedeMedellin.agregar_equipos([futbolMedellin, volleyballMedellin])
     
     # asociacion.sedes.extend([sedeCali, sedeMedellin])
 

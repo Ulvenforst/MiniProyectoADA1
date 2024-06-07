@@ -85,25 +85,8 @@ class LinkedList:
             current = current.next
         return False
 
-
 class Node:
     def __init__(self, key, value):
         self.key = key
         self.value = value
         self.next = None
-
-if __name__ == "__main__":
-    hash_table = HashTable(10)  # Crear una tabla hash de tamaño 10
-
-    # Insertar valores
-    hash_table.insert("apple", 10)
-    hash_table.insert("banana", 20)
-    hash_table.insert("cherry", 30)
-
-    # Buscar valores
-    print(hash_table.search("banana"))  # Salida: 20
-    print(hash_table.search("apple"))   # Salida: 10
-
-    # Eliminar un valor
-    hash_table.delete("banana")
-    print(hash_table.search("banana"))  # Salida: None
