@@ -43,7 +43,7 @@ class Jugador:
         return self._nombre
 
     @property
-    def edad(self):
+    def edad(self) -> int:
         """
         Getter del atributo edad.
 
@@ -77,3 +77,7 @@ class Jugador:
     # Métodos mágicos:
     def __str__(self):
         return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
+
+    def __repr__(self):
+        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
+

@@ -13,18 +13,15 @@
 # INTENCIÓN: Representar una asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Sede; una asociación tiene varias sedes.
 
-from data_structures.TablaHash import HashTable
 from utils.sorting_algorithms import bucket_sort, counting_sort
 from utils.decorators import extraer_y_ordenar, manage_insertions
 
 K = 2      # Número máximo de sedes en la asociación
-MAX_JUGADORES = 100
 
 class Asociacion:
     def __init__(self):
-        self._sedes = []
-        self._hash_sedes = HashTable(K)
-        self._hash_jugadores = HashTable(MAX_JUGADORES)
+        self._list_sedes = []
+        self._list_jugadores = []
 
     @manage_insertions(K, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'sedes')
     def agregar_sedes(self, nuevas_sedes):
@@ -37,7 +34,7 @@ class Asociacion:
         Returns:
             None
         """
-        pass
+        self.ranking_jugadores()
 
     def ranking_jugadores(self):
         """
@@ -46,11 +43,9 @@ class Asociacion:
         Returns:
             TablaHash: Ranking de jugadores.
         """
-        jugadores = self.obtener_jugadores()
-        jugadores = self.ordenar_entidades(jugadores, key='rendimiento')
-        for orden_rendimiento, jugador in enumerate(jugadores):
-            self._hash_jugadores.insert(orden_rendimiento, jugador)
-        return self._hash_jugadores
+        self._list_jugadores = self.obtener_jugadores()
+        self._list_jugadores = self.ordenar_entidades(self._list_jugadores, key='rendimiento')
+        return self._list_jugadores
 
     def jugador_con_mejor_rendimiento(self):
         """
@@ -59,8 +54,7 @@ class Asociacion:
         Returns:
             Jugador: Jugador con mejor rendimiento.
         """
-        jugadores = self.ranking_jugadores()
-        return jugadores.search(jugadores.len() - 1)
+        return self._list_jugadores[-1]
 
     def jugador_con_peor_rendimiento(self):
         """
@@ -69,8 +63,7 @@ class Asociacion:
         Returns:
             Jugador: Jugador con peor rendimiento.
         """
-        jugadores = self.ranking_jugadores()
-        return jugadores.search(0)
+        return self._list_jugadores[0]
 
     def promedio_edad_jugadores(self):
         """
@@ -79,8 +72,7 @@ class Asociacion:
         Returns:
             float: Promedio de edad de los jugadores.
         """
-        jugadores = self.ranking_jugadores()
-        return sum([jugador[1].edad for jugador in jugadores]) / jugadores.len()
+        return sum([jugador.edad for jugador in self._list_jugadores]) / len(self._list_jugadores)
 
     def promedio_rendimiento_jugadores(self):
         """
@@ -89,8 +81,7 @@ class Asociacion:
         Returns:
             float: Promedio de rendimiento de los jugadores.
         """
-        jugadores = self.ranking_jugadores()
-        return sum([jugador[1].rendimiento for jugador in jugadores]) / jugadores.len()
+        return sum([jugador.rendimiento for jugador in self._list_jugadores]) / len(self._list_jugadores)
 
     @extraer_y_ordenar(tipo_entidad='equipos', clave='rendimiento_promedio')
     def equipo_con_menor_rendimiento(self, equipos):
@@ -152,7 +143,7 @@ class Asociacion:
         Returns:
             TablaHash: Sedes de la asociación.
         """
-        return self._hash_sedes
+        return self._list_sedes
 
     # Funciones auxiliares:
     def obtener_jugadores(self):
@@ -163,9 +154,9 @@ class Asociacion:
             list: Lista de jugadores de la asociación.
         """
         jugadores = []
-        for sede in self._hash_sedes:
-            for equipo in sede[1].equipos:
-                jugadores.extend([jugador[1] for jugador in equipo[1].jugadores])
+        for sede in self._list_sedes:
+            for equipo in sede.equipos:
+                jugadores.extend([jugador for jugador in equipo.jugadores])
         return jugadores
 
     def obtener_equipos(self):
@@ -176,8 +167,8 @@ class Asociacion:
             list: Lista de equipos de la asociación.
         """
         equipos = []
-        for sede in self._hash_sedes:
-            equipos.extend([equipo[1] for equipo in sede[1].equipos])
+        for sede in self._list_sedes:
+            equipos.extend([equipo for equipo in sede.equipos])
         return equipos
 
     def ordenar_entidades(self, entidades, key, reverse=False):

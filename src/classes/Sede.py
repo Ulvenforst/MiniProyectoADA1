@@ -13,7 +13,6 @@
 # INTENCIÓN: Representar una sede de la asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Equipo; una sede tiene varios equipos.
 
-from data_structures.TablaHash import HashTable
 from utils.decorators import manage_insertions
 
 M = 2      # Número máximo de equipos por sede
@@ -21,8 +20,7 @@ M = 2      # Número máximo de equipos por sede
 class Sede:
     def __init__(self, nombre):
         self._nombre = nombre
-        self._equipos = []
-        self._hash_equipos = HashTable(M)
+        self._list_equipos = []
         self._rendimiento_promedio = 0
         self._numero_jugadores = 0
 
@@ -37,7 +35,7 @@ class Sede:
         Returns:
             None
         """
-        self._rendimiento_promedio = sum(e[1].rendimiento_promedio for e in self._hash_equipos) / self._hash_equipos.len()
+        self._rendimiento_promedio = sum(e.rendimiento_promedio for e in self._list_equipos) / len(self._list_equipos)
 
     @property
     def nombre(self):
@@ -57,7 +55,7 @@ class Sede:
         Returns:
             HashTable: Tabla hash de equipos.
         """
-        return self._hash_equipos
+        return self._list_equipos
 
     @property
     def rendimiento_promedio(self):
@@ -85,4 +83,4 @@ class Sede:
 
     @equipos.setter
     def equipos(self, equipos):
-        self._equipos = equipos
+        self._list_equipos = equipos

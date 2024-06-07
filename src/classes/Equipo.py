@@ -13,7 +13,6 @@
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
 
-from data_structures.TablaHash import HashTable
 from utils.decorators import manage_insertions
 
 N_min = 2  # Número mínimo de jugadores por equipo
@@ -22,8 +21,7 @@ N_max = 4  # Número máximo de jugadores por equipo
 class Equipo:
     def __init__(self, deporte):
         self._deporte = deporte
-        self._jugadores = []
-        self._hash_jugadores = HashTable(N_max)
+        self._list_jugadores = []
         self._rendimiento_promedio = 0
         self._numero_jugadores = 0
 
@@ -38,7 +36,7 @@ class Equipo:
         Returns:
             None
         """
-        self._rendimiento_promedio = sum(j[1].rendimiento for j in self._hash_jugadores) / self._hash_jugadores.len()
+        self._rendimiento_promedio = sum(j.rendimiento for j in self._list_jugadores) / len(self._list_jugadores)
 
     @property
     def deporte(self):
@@ -59,8 +57,7 @@ class Equipo:
             HashTable: Tabla hash de jugadores.
 
         """
-        # return self._jugadores
-        return self._hash_jugadores
+        return self._list_jugadores
 
     @property
     def rendimiento_promedio(self):
@@ -88,7 +85,7 @@ class Equipo:
 
     @jugadores.setter
     def jugadores(self, jugadores):
-        self._jugadores = jugadores
+        self._list_jugadores = jugadores
     
     # Métodos mágicos:
     def __str__(self):
