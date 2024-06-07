@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/02/2024                                     #
+# Fecha de última modificación: 06/06/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -13,8 +13,8 @@
 # INTENCIÓN: Representar una sede de la asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Equipo; una sede tiene varios equipos.
 
-from classes.TablaHash import HashTable
-from algorithms.sorting import counting_sort, bucket_sort
+from data_structures.TablaHash import HashTable
+from utils.decorators import manage_insertions
 
 M = 2      # Número máximo de equipos por sede
 
@@ -26,22 +26,9 @@ class Sede:
         self._rendimiento_promedio = 0
         self._numero_jugadores = 0
 
+    @manage_insertions(M, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'equipos')
     def agregar_equipos(self, nuevos_equipos):
-        if len(self._equipos) + len(nuevos_equipos) > M:
-            print(f"El equipo {self._nombre} excederá el tamaño máximo permitido de equipos.")
-            return
-        
-        nuevos_equipos = bucket_sort(nuevos_equipos, key=lambda x: x.rendimiento_promedio)
-        nuevos_equipos = counting_sort(nuevos_equipos, key=lambda x: x.numero_jugadores, reverse=True)
-
-        for orden_rendimiento, equipo in enumerate(nuevos_equipos):
-            self._hash_equipos.insert(orden_rendimiento, equipo)
-
-        for equipo in self._hash_equipos:
-            self._rendimiento_promedio += equipo[1].rendimiento_promedio
-        self._rendimiento_promedio /= self._hash_equipos.len()
-
-        for equipo in self._hash_equipos: self._numero_jugadores += equipo[1].numero_jugadores
+        self._rendimiento_promedio = sum(e[1].rendimiento_promedio for e in self._hash_equipos) / self._hash_equipos.len()
 
     @property
     def nombre(self):

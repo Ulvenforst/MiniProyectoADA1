@@ -5,13 +5,15 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/05/2024                                                #
-# Fecha de última modificación: 06/05/2024                                     #
+# Fecha de última modificación: 06/06/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
 # CLASE: TablaHash
-# INTENCIÓN: Representar una asociación de deportes.
-# RELACIONES: Esta clase se relaciona con la clase Sede; una asociación tiene varias sedes.
+# INTENCIÓN: Representar una tabla hash.
+# RELACIONES: Esta clase se relaciona con la clase LinkedList; una tabla hash tiene varias listas enlazadas.
+
+from .LinkedList import LinkedList
 
 class HashTable:
     def __init__(self, size):
@@ -63,39 +65,4 @@ class HashTable:
                 current = current.next
         return result
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
-
-    def find(self, key):
-        current = self.head
-        while current:
-            if current.key == key:
-                return current
-            current = current.next
-        return None
-
-    def insert(self, key, value):
-        new_node = Node(key, value)
-        new_node.next = self.head
-        self.head = new_node
-
-    def delete(self, key):
-        current = self.head
-        prev = None
-        while current:
-            if current.key == key:
-                if prev:
-                    prev.next = current.next
-                else:
-                    self.head = current.next
-                return True
-            prev = current
-            current = current.next
-        return False
     
-class Node:
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-        self.next = None

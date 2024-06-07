@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/02/2024                                     #
+# Fecha de última modificación: 06/06/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -13,8 +13,9 @@
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
 
-from .TablaHash import HashTable
-from algorithms.sorting import counting_sort
+
+from data_structures.TablaHash import HashTable
+from utils.decorators import manage_insertions
 
 N_min = 2  # Número mínimo de jugadores por equipo
 N_max = 4  # Número máximo de jugadores por equipo
@@ -27,27 +28,9 @@ class Equipo:
         self._rendimiento_promedio = 0
         self._numero_jugadores = 0
 
+    @manage_insertions(N_max, [('edad', True), ('rendimiento', False)], 'jugadores')
     def agregar_jugadores(self, nuevos_jugadores):
-        if len(self._jugadores) + len(nuevos_jugadores) > N_max:
-            print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
-            return
-        
-        nuevos_jugadores = counting_sort(nuevos_jugadores, key=lambda x: x.edad, reverse=True)
-        nuevos_jugadores = counting_sort(nuevos_jugadores, key=lambda x: x.rendimiento)
-
-        for orden_rendimiento, jugador in enumerate(nuevos_jugadores):
-            self._hash_jugadores.insert(orden_rendimiento, jugador)
-
-        for jugador in self._hash_jugadores:
-            self._rendimiento_promedio += jugador[1].rendimiento
-        self._rendimiento_promedio /= self._hash_jugadores.len()
-
-        self._numero_jugadores = self._hash_jugadores.len()
-
-        # Mirar tamaño mínimo
-        if self._numero_jugadores < N_min:
-            print(f"El equipo {self._deporte} no cumple con el tamaño mínimo de jugadores.")
-            return
+        self._rendimiento_promedio = sum(j[1].rendimiento for j in self._hash_jugadores) / self._hash_jugadores.len()
 
     def __str__(self):
         return f"Equipo de {self._deporte} - Rendimiento promedio: {self._rendimiento_promedio}"

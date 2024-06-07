@@ -52,5 +52,3 @@ class Jugador:
     @rendimiento.setter
     def rendimiento(self, rendimiento):
         self._rendimiento = rendimiento
-
-

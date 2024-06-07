@@ -5,7 +5,7 @@
 #          Jhoan Felipe León Correa 2228527                                    #
 #          Juan Camilo Narváez Tascón 2140112                                  #
 # Fecha de creación: 06/02/2024                                                #
-# Fecha de última modificación: 06/02/2024                                     #
+# Fecha de última modificación: 06/06/2024                                     #
 # Licencia: GNU-GPL                                                            #
 ################################################################################
 
@@ -13,8 +13,9 @@
 # INTENCIÓN: Representar una asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Sede; una asociación tiene varias sedes.
 
-from .TablaHash import HashTable
-from algorithms.sorting import bucket_sort, counting_sort
+from data_structures.TablaHash import HashTable
+from utils.sorting_algorithms import bucket_sort, counting_sort
+from utils.decorators import extraer_y_ordenar, manage_insertions
 
 K = 2      # Número máximo de sedes en la asociación
 
@@ -24,16 +25,9 @@ class Asociacion:
         self._hash_sedes = HashTable(K)
         self._hash_jugadores = HashTable(100)
 
+    @manage_insertions(K, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'sedes')
     def agregar_sedes(self, nuevas_sedes):
-        if len(self._sedes) + len(nuevas_sedes) > K:
-            print("La asociación excederá el tamaño máximo permitido de sedes.")
-            return
-        
-        nuevas_sedes = bucket_sort(nuevas_sedes, key=lambda x: x.rendimiento_promedio)
-        nuevas_sedes = counting_sort(nuevas_sedes, key=lambda x: x.numero_jugadores, reverse=True)
-
-        for orden_rendimiento, sede in enumerate(nuevas_sedes):
-            self._hash_sedes.insert(orden_rendimiento, sede)
+        pass
 
     def ranking_jugadores(self):
         jugadores = self.obtener_jugadores()
@@ -42,15 +36,21 @@ class Asociacion:
             self._hash_jugadores.insert(orden_rendimiento, jugador)
         return self._hash_jugadores
 
-    def equipo_con_menor_rendimiento(self):
-        equipos = self.obtener_equipos()
-        equipos = self.ordenar_entidades(equipos, key='rendimiento_promedio')
+    @extraer_y_ordenar(tipo_entidad='equipos', clave='rendimiento_promedio')
+    def equipo_con_menor_rendimiento(self, equipos):
         return equipos[0]
 
-    def equipo_con_mayor_rendimiento(self):
-        equipos = self.obtener_equipos()
-        equipos = self.ordenar_entidades(equipos, key='rendimiento_promedio', reverse=True)
+    @extraer_y_ordenar(tipo_entidad='equipos', clave='rendimiento_promedio', reverse=True)
+    def equipo_con_mayor_rendimiento(self, equipos):
         return equipos[0]
+
+    @extraer_y_ordenar(tipo_entidad='jugadores', clave='edad', reverse=True)
+    def jugador_mas_viejo(self, jugadores):
+        return jugadores[0]
+    
+    @extraer_y_ordenar(tipo_entidad='jugadores', clave='edad')
+    def jugador_mas_joven(self, jugadores):
+        return jugadores[0]
 
     def jugador_con_mejor_rendimiento(self):
         jugadores = self.ranking_jugadores()
@@ -59,16 +59,6 @@ class Asociacion:
     def jugador_con_peor_rendimiento(self):
         jugadores = self.ranking_jugadores()
         return jugadores.search(0)
-
-    def jugador_mas_viejo(self):
-        jugadores = self.obtener_jugadores()
-        jugadores = self.ordenar_entidades(jugadores, key='edad', reverse=True)
-        return jugadores[0]
-    
-    def jugador_mas_joven(self):
-        jugadores = self.obtener_jugadores()
-        jugadores = self.ordenar_entidades(jugadores, key='edad')
-        return jugadores[0]
 
     def promedio_edad_jugadores(self):
         jugadores = self.ranking_jugadores()
@@ -99,4 +89,3 @@ class Asociacion:
         if key in ['rendimiento', 'edad']:
             return counting_sort(entidades, key=lambda x: getattr(x, key), reverse=reverse)
         return bucket_sort(entidades, key=lambda x: getattr(x, key), reverse=reverse)
-
