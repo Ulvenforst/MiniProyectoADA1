@@ -28,6 +28,7 @@ class Equipo:
         self._deporte = deporte
         self._jugadores = []
         self._hash_jugadores = HashTable(N_max)
+        self._rendimiento_promedio = 0
 
     def agregar_jugadores(self, nuevos_jugadores):
         if len(self._jugadores) + len(nuevos_jugadores) > N_max:
@@ -35,6 +36,7 @@ class Equipo:
             return
         self._jugadores.extend(nuevos_jugadores)
 
+        
         max_rendimiento = max(jugador.rendimiento for jugador in nuevos_jugadores)
         max_edad = max(jugador.edad for jugador in nuevos_jugadores)
         nuevos_jugadores = counting_sort(nuevos_jugadores, max_edad, key=lambda x: x.edad)
@@ -64,6 +66,15 @@ class Equipo:
     @jugadores.setter
     def jugadores(self, jugadores):
         self._jugadores = jugadores
+
+    @property
+    def rendimiento_promedio(self):
+        # calcular el rendimiento promedio de _hash_jugadores con la cantidad mínima de lineas de codigo
+        rendimiento_promedio = 0
+        for jugador in self._hash_jugadores:
+            rendimiento_promedio += jugador.rendimiento
+        rendimiento_promedio /= len(self._hash_jugadores)
+        return rendimiento_promedio
 
 
 if __name__ == "__main__":
