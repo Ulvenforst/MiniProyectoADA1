@@ -44,8 +44,10 @@ class Equipo:
 
         self._numero_jugadores = self._hash_jugadores.len()
 
-        if len(self._jugadores) < N_min:
-            print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
+        # Mirar tamaño mínimo
+        if self._numero_jugadores < N_min:
+            print(f"El equipo {self._deporte} no cumple con el tamaño mínimo de jugadores.")
+            return
 
     def __str__(self):
         return f"Equipo de {self._deporte} - Rendimiento promedio: {self._rendimiento_promedio}"
