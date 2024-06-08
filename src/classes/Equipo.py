@@ -35,14 +35,14 @@ class Equipo:
         self._jugadores.extend(nuevos_jugadores)
 
         for jugador in nuevos_jugadores:
-            self._arbol_jugadores.insertar(Nodo(jugador.identificador, jugador.rendimiento, jugador.edad))
-            self._arbol_jugadores_edad.insertar(Nodo(jugador.identificador, jugador.edad, jugador.rendimiento))
+            self._arbol_jugadores.insertar(Nodo(jugador, jugador.rendimiento, jugador.edad))
+            self._arbol_jugadores_edad.insertar(Nodo(jugador, jugador.edad, jugador.rendimiento))
             
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
 
     def ranking_jugadores(self):
-        print(self._arbol_jugadores.in_orden())
+        return self._arbol_jugadores.in_orden()
 
     @property
     def deporte(self):
@@ -59,3 +59,6 @@ class Equipo:
     @jugadores.setter
     def jugadores(self, jugadores):
         self._jugadores = jugadores
+
+    def __str__(self):
+        return f"Equipo de {self._deporte}"

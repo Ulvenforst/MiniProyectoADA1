@@ -14,11 +14,14 @@
 # RELACIONES: No tiene.
 
 class Nodo(object):
-    def __init__(self, identificador, dato, factor_desempate):
-        self.identificador = identificador
+    def __init__(self, jugador, dato, factor_desempate):
+        self.jugador = jugador
         self.dato = dato
         self.factor_desempate = factor_desempate
         self.color = 0
         self.izq = None
         self.der = None
         self.padre = None
+
+    def __repr__(self):
+        return f"{self.jugador}"

@@ -37,7 +37,7 @@ class Sede:
             self._arbol_equipos.insertar(Nodo(equipo.deporte, promedio_equipo, len(equipo.jugadores)))
 
     def ranking_equipos(self):
-        print(self._arbol_equipos.in_orden())
+        return self._arbol_equipos.in_orden()
 
     @property
     def nombre(self):

@@ -50,4 +50,9 @@ class Jugador:
     def rendimiento(self, rendimiento):
         self._rendimiento = rendimiento
 
+    # Métodos mágicos:
+    def __str__(self):
+        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"
 
+    def __repr__(self):
+        return f"{self._identificador}: {self._nombre} ({self._edad} años) - Rendimiento: {self._rendimiento}"

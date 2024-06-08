@@ -117,7 +117,7 @@ class ArbolRojiNegro(object):
             if nodo.izq is not None:
                 self.in_orden(nodo.izq, resultado)
 
-            resultado.append(nodo.identificador)
+            resultado.append(nodo)
 
             if nodo.der is not None:
                 self.in_orden(nodo.der, resultado)
