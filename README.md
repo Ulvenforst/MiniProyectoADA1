@@ -114,8 +114,8 @@ La salida de esta instancia debería ser:
 futbolMedellin = asociacion.sedes[1].equipos[0]  # > {6, 7, 10}
 volleyballMedellin = asociacion.sedes[1].equipos[1]  # > {2, 4, 3}
 
-futbolCali = asociacion.sedes[0].equipos[0]  # > {5, 0, 11, 8}
-volleyballCali = asociacion.sedes[0].equipos[1]  # > {1, 9}
+futbolCali = asociacion.sedes[0].equipos[0]  # > {1, 9}
+volleyballCali = asociacion.sedes[0].equipos[1]  # > {5, 0, 11, 8}
 
 # Obtener ranking de jugadores
 ranking = asociacion.ranking_jugadores()  # > {2, 1, 6, 5, 4, 9, 0, 3, 11, 7, 10, 8}
