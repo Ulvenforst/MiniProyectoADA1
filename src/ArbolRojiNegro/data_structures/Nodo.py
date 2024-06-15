@@ -23,5 +23,10 @@ class Nodo(object):
         self.der = None
         self.padre = None
 
-    def __repr__(self):
+    @property
+    def nombre(self):
         return f"{self.jugador}"
+
+    def __str__(self):
+        return f"{self.jugador}"
+

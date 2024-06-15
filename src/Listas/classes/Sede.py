@@ -15,7 +15,7 @@
 
 from ..utils.decorators import manage_insertions
 
-M = 2      # Número máximo de equipos por sede
+M = 10      # Número máximo de equipos por sede
 
 class Sede:
     def __init__(self, nombre):
@@ -24,7 +24,7 @@ class Sede:
         self._rendimiento_promedio = 0
         self._numero_jugadores = 0
 
-    @manage_insertions(M, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'equipos')
+    @manage_insertions(M, [('rendimiento_promedio', True), ('numero_jugadores', False)], 'equipos')
     def agregar_equipos(self, nuevos_equipos):
         """
         Agrega equipos a la sede.
@@ -48,7 +48,7 @@ class Sede:
         return self._nombre
     
     @property
-    def equipos(self):
+    def ranking_equipos(self):
         """
         Getter del atributo equipos.
 
@@ -81,6 +81,19 @@ class Sede:
     def nombre(self, nombre):
         self._nombre = nombre
 
-    @equipos.setter
+    @ranking_equipos.setter
     def equipos(self, equipos):
         self._list_equipos = equipos
+
+    def __lt__(self, other):
+        return self._rendimiento_promedio < other.rendimiento_promedio
+
+    def __le__(self, other):
+        return self._rendimiento_promedio <= other.rendimiento_promedio
+    
+    def __gt__(self, other):
+        return self._rendimiento_promedio > other.rendimiento_promedio
+
+    def __ge__(self, other):
+        return self._rendimiento_promedio >= other.rendimiento_promedio
+

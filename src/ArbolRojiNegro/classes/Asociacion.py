@@ -16,8 +16,9 @@
 from ..data_structures.ArbolRojiNegro   import ArbolRojiNegro
 from ..data_structures.Nodo             import Nodo
 from ..classes.Sede                     import Sede
+from .Jugador                           import Jugador
 
-K=2
+K = 10 # Número máximo de sedes permitidas en la asociación.
 
 class Asociacion:
     def __init__(self):
@@ -40,8 +41,18 @@ class Asociacion:
     
             self._arbol_sedes.insertar(Nodo(sede.nombre, rendimiento_sede, len(sede.equipos)))
 
+    def resetear_datos():
+        """
+        Reinicia los datos de la asociación.
+
+        Returns:
+            None
+        """
+        Jugador.reset_contador()
+
+    @property
     def ranking_sedes(self):
-        print(self._arbol_sedes.in_orden())
+        return self._arbol_sedes.in_orden()
     
     def jugador_con_mejor_rendimiento(self):
         maximo = self._sedes[0].equipos[0]._arbol_jugadores.maximo()

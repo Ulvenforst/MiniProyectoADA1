@@ -16,7 +16,7 @@
 from ..utils.decorators import manage_insertions
 
 N_min = 2  # Número mínimo de jugadores por equipo
-N_max = 4  # Número máximo de jugadores por equipo
+N_max = 10  # Número máximo de jugadores por equipo
 
 class Equipo:
     def __init__(self, deporte):
@@ -84,7 +84,7 @@ class Equipo:
         self._deporte = deporte
 
     @ranking_jugadores.setter
-    def jugadores(self, jugadores):
+    def ranking_jugadores(self, jugadores):
         self._list_jugadores = jugadores
     
     # Métodos mágicos:

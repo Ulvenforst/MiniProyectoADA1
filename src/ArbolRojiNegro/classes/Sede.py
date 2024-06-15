@@ -17,7 +17,7 @@ from .Equipo import Equipo
 from ..data_structures.ArbolRojiNegro import ArbolRojiNegro
 from ..data_structures.Nodo import Nodo
 
-M = 2      # Número máximo de equipos por sede
+M = 10      # Número máximo de equipos por sede
 
 class Sede:
     def __init__(self, nombre):
@@ -36,6 +36,7 @@ class Sede:
             promedio_equipo = suma_rendimiento_jugadores / len(equipo.jugadores)
             self._arbol_equipos.insertar(Nodo(equipo.deporte, promedio_equipo, len(equipo.jugadores)))
 
+    @property
     def ranking_equipos(self):
         return self._arbol_equipos.in_orden()
 

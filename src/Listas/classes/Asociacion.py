@@ -15,15 +15,16 @@
 
 from ..utils.sorting_algorithms import counting_sort, bucket_sort
 from ..utils.decorators import extraer_y_ordenar, manage_insertions
+from .Jugador import Jugador
 
-K = 2      # Número máximo de sedes en la asociación
+K = 10      # Número máximo de sedes en la asociación
 
 class Asociacion:
     def __init__(self):
         self._list_sedes = []
         self._list_jugadores = []
 
-    @manage_insertions(K, [('rendimiento_promedio', False), ('numero_jugadores', True)], 'sedes')
+    @manage_insertions(K, [('rendimiento_promedio', True), ('numero_jugadores', False)], 'sedes')
     def agregar_sedes(self, nuevas_sedes):
         """
         Agrega sedes a la asociación.
@@ -46,6 +47,15 @@ class Asociacion:
         self._list_jugadores = self.obtener_jugadores()
         self._list_jugadores = self.ordenar_entidades(self._list_jugadores, key='rendimiento')
         return self._list_jugadores
+    
+    def resetear_datos():
+        """
+        Reinicia los datos de la asociación.
+
+        Returns:
+            None
+        """
+        Jugador.reset_contador()
 
     def jugador_con_mejor_rendimiento(self):
         """
@@ -136,7 +146,7 @@ class Asociacion:
         return jugadores[0]
 
     @property
-    def sedes(self):
+    def ranking_sedes(self):
         """
         Getter de la propiedad sedes.
 
@@ -155,7 +165,7 @@ class Asociacion:
         """
         jugadores = []
         for sede in self._list_sedes:
-            for equipo in sede.equipos: jugadores.extend([jugador for jugador in equipo.jugadores])
+            for equipo in sede.equipos: jugadores.extend([jugador for jugador in equipo.ranking_jugadores])
         return jugadores
 
     def obtener_equipos(self):

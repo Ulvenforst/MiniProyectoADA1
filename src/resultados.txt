@@ -3,146 +3,177 @@
 Resultados con Listas:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PRUEBAS PDF:
--------------------
-Jugadores del equipo de futbol de Medellín:
-6: Camila Fernández (24 años) - Rendimiento: 36
-7: Mateo González (29 años) - Rendimiento: 89
-10: Luciana Sánchez (18 años) - Rendimiento: 89
--------------------
-Jugadores del equipo de volleyball de Medellín:
-2: Valentina Rodriguez (19 años) - Rendimiento: 15
-4: Martina Martinez (30 años) - Rendimiento: 55
-3: Juan López (22 años) - Rendimiento: 78
--------------------
-Jugadores del equipo de futbol de Cali:
-1: Alejandro Torres (27 años) - Rendimiento: 24
-9: Daniel Ruiz (17 años) - Rendimiento: 57
--------------------
-Jugadores del equipo de volleyball de Cali:
-5: Sebastián Pérez (25 años) - Rendimiento: 42
-0: Sofia García (21 años) - Rendimiento: 66
-11: Lucas Vásquez (26 años) - Rendimiento: 82
-8: Isabella Díaz (21 años) - Rendimiento: 92
--------------------
-Ranking de jugadores de la asociación:
--------------------
-Equipo con mayor rendimiento promedio:
-Equipo de Futbol Medellín - Rendimiento promedio: 71.33333333333333
--------------------
-Equipo con menor rendimiento promedio:
-Equipo de Futbol Cali - Rendimiento promedio: 40.5
--------------------
-Jugador con mejor rendimiento:
-8: Isabella Díaz (21 años) - Rendimiento: 92
--------------------
-Jugador con peor rendimiento:
-2: Valentina Rodriguez (19 años) - Rendimiento: 15
--------------------
-Jugador más joven:
-9: Daniel Ruiz (17 años) - Rendimiento: 57
--------------------
-Jugador más viejo:
-4: Martina Martinez (30 años) - Rendimiento: 55
--------------------
-Promedio de edad de los jugadores:
-23.25
--------------------
-Promedio de rendimiento de los jugadores:
-60.416666666666664
-
 
 
 PRUEBAS DE INPUT 1:
 -------------------
-Sede Cali rendimiento promedio:
-
+-------------------
+Equipo con mayor rendimiento promedio:
+	Equipo de Volleyball - Rendimiento promedio: 80.33333333333333 - Sede Medellin 
+-------------------
+Equipo con menor rendimiento promedio:
+	Equipo de Volleyball - Rendimiento promedio: 47.666666666666664 - Sede Cali 
+-------------------
+Jugador con mejor rendimiento:
+	12: Raul (31 años) - Rendimiento: 100
+-------------------
+Jugador con peor rendimiento:
+	3: Pedro (22 años) - Rendimiento: 21
+-------------------
+Jugador más joven:
+	1: Juan (20 años) - Rendimiento: 94
+-------------------
+Jugador más viejo:
+	12: Raul (31 años) - Rendimiento: 100
+-------------------
+Promedio de edad de los jugadores:
+	25.5
+-------------------
+Promedio de rendimiento de los jugadores:
+	67.16666666666667
 
 
 PRUEBAS DE INPUT 2:
-El equipos excederá el tamaño máximo permitido de 2.
-El equipos excederá el tamaño máximo permitido de 2.
-
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+	Equipo de Futbol - Rendimiento promedio: 71.33333333333333 - Sede Medellin 
+-------------------
+Equipo con menor rendimiento promedio:
+	Equipo de Futbol - Rendimiento promedio: 40.5 - Sede Cali 
+-------------------
+Jugador con mejor rendimiento:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+-------------------
+Jugador más joven:
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Promedio de edad de los jugadores:
+	24.55
+-------------------
+Promedio de rendimiento de los jugadores:
+	59.75
 
 
 PRUEBAS DE INPUT 3:
-El jugadores excederá el tamaño máximo permitido de 4.
-El jugadores excederá el tamaño máximo permitido de 4.
-El equipos excederá el tamaño máximo permitido de 2.
-El equipos excederá el tamaño máximo permitido de 2.
-El equipos excederá el tamaño máximo permitido de 2.
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+	Equipo de Tenis - Rendimiento promedio: 68.25 - Sede Bogota 
+-------------------
+Equipo con menor rendimiento promedio:
+	Equipo de Basketball - Rendimiento promedio: 37.0 - Sede Medellin 
+-------------------
+Jugador con mejor rendimiento:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+	60: Diana Herrera (26 años) - Rendimiento: 11
+-------------------
+Jugador más joven:
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+	50: Patricia Guzman (42 años) - Rendimiento: 37
+-------------------
+Promedio de edad de los jugadores:
+	25.8
+-------------------
+Promedio de rendimiento de los jugadores:
+	57.88333333333333
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Resultados con Arboles RojiNegros:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PRUEBAS PDF:
--------------------
-Jugadores del equipo de futbol de Medellín:
-6: Camila Fernández (24 años) - Rendimiento: 36
-7: Mateo González (29 años) - Rendimiento: 89
-10: Luciana Sánchez (18 años) - Rendimiento: 89
--------------------
-Jugadores del equipo de volleyball de Medellín:
-2: Valentina Rodriguez (19 años) - Rendimiento: 15
-4: Martina Martinez (30 años) - Rendimiento: 55
-3: Juan López (22 años) - Rendimiento: 78
--------------------
-Jugadores del equipo de futbol de Cali:
-1: Alejandro Torres (27 años) - Rendimiento: 24
-9: Daniel Ruiz (17 años) - Rendimiento: 57
--------------------
-Jugadores del equipo de volleyball de Cali:
-5: Sebastián Pérez (25 años) - Rendimiento: 42
-0: Sofia García (21 años) - Rendimiento: 66
-11: Lucas Vásquez (26 años) - Rendimiento: 82
-8: Isabella Díaz (21 años) - Rendimiento: 92
--------------------
-Ranking de jugadores de la asociación:
--------------------
-Equipo con mayor rendimiento promedio:
-Futbol Medellín
--------------------
-Equipo con menor rendimiento promedio:
-Futbol Cali
--------------------
-Jugador con mejor rendimiento:
-8: Isabella Díaz (21 años) - Rendimiento: 92
--------------------
-Jugador con peor rendimiento:
-2: Valentina Rodriguez (19 años) - Rendimiento: 15
--------------------
-Jugador más joven:
-9: Daniel Ruiz (17 años) - Rendimiento: 57
--------------------
-Jugador más viejo:
-4: Martina Martinez (30 años) - Rendimiento: 55
--------------------
-Promedio de edad de los jugadores:
-23.25
--------------------
-Promedio de rendimiento de los jugadores:
-60.416666666666664
-
 
 
 PRUEBAS DE INPUT 1:
 -------------------
-Sede Cali rendimiento promedio:
-
+-------------------
+Equipo con mayor rendimiento promedio:
+	Volleyball - Sede Medellin 
+-------------------
+Equipo con menor rendimiento promedio:
+	Volleyball - Sede Cali 
+-------------------
+Jugador con mejor rendimiento:
+	12: Raul (31 años) - Rendimiento: 100
+-------------------
+Jugador con peor rendimiento:
+	3: Pedro (22 años) - Rendimiento: 21
+-------------------
+Jugador más joven:
+	1: Juan (20 años) - Rendimiento: 94
+-------------------
+Jugador más viejo:
+	12: Raul (31 años) - Rendimiento: 100
+-------------------
+Promedio de edad de los jugadores:
+	25.5
+-------------------
+Promedio de rendimiento de los jugadores:
+	67.16666666666667
 
 
 PRUEBAS DE INPUT 2:
-La sede Sede Cali excederá el tamaño máximo permitido de equipos.
-La sede Sede Medellin excederá el tamaño máximo permitido de equipos.
-
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+	Futbol - Sede Medellin 
+-------------------
+Equipo con menor rendimiento promedio:
+	Futbol - Sede Cali 
+-------------------
+Jugador con mejor rendimiento:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+-------------------
+Jugador más joven:
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Promedio de edad de los jugadores:
+	24.55
+-------------------
+Promedio de rendimiento de los jugadores:
+	59.75
 
 
 PRUEBAS DE INPUT 3:
-El equipo Volleyball excederá el tamaño máximo permitido de jugadores.
-El equipo Natacion excederá el tamaño máximo permitido de jugadores.
-La sede Sede Cali excederá el tamaño máximo permitido de equipos.
-La sede Sede Medellin excederá el tamaño máximo permitido de equipos.
-La sede Sede Bogota excederá el tamaño máximo permitido de equipos.
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+	Tenis - Sede Bogota 
+-------------------
+Equipo con menor rendimiento promedio:
+	Basketball - Sede Medellin 
+-------------------
+Jugador con mejor rendimiento:
+	9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+	60: Diana Herrera (26 años) - Rendimiento: 11
+-------------------
+Jugador más joven:
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+	50: Patricia Guzman (42 años) - Rendimiento: 37
+-------------------
+Promedio de edad de los jugadores:
+	25.8
+-------------------
+Promedio de rendimiento de los jugadores:
+	57.88333333333333
