@@ -41,6 +41,7 @@ class Equipo:
         if len(self._jugadores) < N_min:
             print(f"El equipo {self._deporte} no cumple con el tamaño mínimo requerido de jugadores.")
 
+    @property
     def ranking_jugadores(self):
         return self._arbol_jugadores.in_orden()
 

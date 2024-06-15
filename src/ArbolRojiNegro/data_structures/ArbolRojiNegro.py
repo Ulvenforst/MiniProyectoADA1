@@ -22,10 +22,10 @@ class ArbolRojiNegro(object):
         y = x.der               # y es el hijo derecho de x
         x.der = y.izq           # el hijo derecho de x sera el hijo izquierdo de y
         if y.izq:               # comprobar si y.izq no es None
-            y.izq.padre = x         # el padre del hijo izquierdo de y ahora sera x
+            y.izq.padre = x     # el padre del hijo izquierdo de y ahora sera x
         y.padre = x.padre       # el padre de y sera el padre de x
         if x.padre is None:     # si x es la raiz
-            self.raiz = y          # y sera la nueva raiz
+            self.raiz = y       # y sera la nueva raiz
         elif x == x.padre.izq:  # si x es el hijo izquierdo
             x.padre.izq = y     # y sera el hijo izquierdo
         else:                   # si x es el hijo derecho

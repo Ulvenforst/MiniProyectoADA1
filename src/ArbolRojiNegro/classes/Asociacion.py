@@ -24,7 +24,7 @@ class Asociacion:
         self._sedes = []
         self._arbol_sedes = ArbolRojiNegro()
 
-    def agregar_sede(self, nueva_sede):
+    def agregar_sedes(self, nueva_sede):
         if len(self._sedes) + len(nueva_sede) > K:
             print(f"La sede {self._nombre} excederá el tamaño máximo permitido de Sedes.")
             return
@@ -43,7 +43,7 @@ class Asociacion:
     def ranking_sedes(self):
         print(self._arbol_sedes.in_orden())
     
-    def jugador_mayor_rendimiento(self):
+    def jugador_con_mejor_rendimiento(self):
         maximo = self._sedes[0].equipos[0]._arbol_jugadores.maximo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -51,7 +51,7 @@ class Asociacion:
                    maximo=equipo._arbol_jugadores.maximo()
         return maximo
 
-    def jugador_menor_rendimiento(self):
+    def jugador_con_peor_rendimiento(self):
         minimo = self._sedes[0].equipos[0]._arbol_jugadores.minimo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -59,21 +59,21 @@ class Asociacion:
                    minimo=equipo._arbol_jugadores.minimo()
         return minimo
 
-    def equipo_mayor_rendimiento(self):
+    def equipo_con_mayor_rendimiento(self):
         maximo = self._sedes[0]._arbol_equipos.maximo()
         for sede in self._sedes:
             if maximo.dato < sede._arbol_equipos.maximo().dato:
                maximo=sede._arbol_equipos.maximo()
         return maximo
 
-    def equipo_menor_rendimiento(self):
+    def equipo_con_menor_rendimiento(self):
         minimo = self._sedes[0]._arbol_equipos.minimo()
         for sede in self._sedes:
             if minimo.dato > sede._arbol_equipos.minimo().dato:
                minimo=sede._arbol_equipos.minimo()
         return minimo
     
-    def jugador_mayor_edad(self):
+    def jugador_mas_viejo(self):
         maximo = self._sedes[0].equipos[0]._arbol_jugadores_edad.maximo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -81,7 +81,7 @@ class Asociacion:
                    maximo=equipo._arbol_jugadores_edad.maximo()
         return maximo
 
-    def jugador_menor_edad(self):
+    def jugador_mas_joven(self):
         minimo = self._sedes[0].equipos[0]._arbol_jugadores_edad.minimo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -89,7 +89,7 @@ class Asociacion:
                    minimo=equipo._arbol_jugadores_edad.minimo()
         return minimo
          
-    def promedio_rendimiento(self):
+    def promedio_rendimiento_jugadores(self):
         longitud=0
         suma=0
         for sede in self._sedes:
@@ -100,7 +100,7 @@ class Asociacion:
         promedio=suma/longitud
         return promedio
 
-    def promedio_edad(self):
+    def promedio_edad_jugadores(self):
         longitud=0
         suma=0
         for sede in self._sedes:

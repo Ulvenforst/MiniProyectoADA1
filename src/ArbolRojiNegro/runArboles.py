@@ -21,67 +21,9 @@
 # sobre su ejecución y estructura de archivos.
 
 from .classes import Asociacion, Jugador, Equipo, Sede
+from pruebas import decorador_pruebas
 
-def runArboles():
-    asociacion = Asociacion()
-    
-    # Crear jugadores
-    jugadores = [
-        Jugador("Sofia García", 21, 66), Jugador("Alejandro Torres", 27, 24),
-        Jugador("Valentina Rodriguez", 19, 15), Jugador("Juan López", 22, 78),
-        Jugador("Martina Martinez", 30, 55), Jugador("Sebastián Pérez", 25, 42),
-        Jugador("Camila Fernández", 24, 36), Jugador("Mateo González", 29, 89),
-        Jugador("Isabella Díaz", 21, 92), Jugador("Daniel Ruiz", 17, 57),
-        Jugador("Luciana Sánchez", 18, 89), Jugador("Lucas Vásquez", 26, 82)
-    ]
-    
-    # Crear equipos y sedes
-    print("-------------------")
-    futbolCali = Equipo("Futbol Cali")
-    futbolCali.agregar_jugadores([jugadores[9], jugadores[1]])
-    for jugador in futbolCali.ranking_jugadores(): print(jugador)
-    print("-------------------")
-    volleyballCali = Equipo("Volleyball Cali")
-    volleyballCali.agregar_jugadores([jugadores[0], jugadores[8], jugadores[11], jugadores[5]])
-    for jugador in volleyballCali.ranking_jugadores(): print(jugador)
-    print("-------------------")
-    sedeCali = Sede("Cali")
-    sedeCali.agregar_equipos([futbolCali, volleyballCali])
-    for equipo in sedeCali.ranking_equipos(): print(equipo)
-    print("-------------------")
-    futbolMedellin = Equipo("Futbol Medellin")
-    futbolMedellin.agregar_jugadores([jugadores[10], jugadores[7], jugadores[6]])
-    for jugador in futbolMedellin.ranking_jugadores(): print(jugador)
-    print("-------------------")
-    volleyballMedellin = Equipo("Volleyball Medellin")
-    volleyballMedellin.agregar_jugadores([jugadores[2], jugadores[3], jugadores[4]])
-    for jugador in volleyballMedellin.ranking_jugadores(): print(jugador)
-    print("-------------------")
-    sedeMedellin = Sede("Medellín")
-    sedeMedellin.agregar_equipos([futbolMedellin, volleyballMedellin])
-    for equipo in sedeMedellin.ranking_equipos(): print(equipo)
-    asociacion.agregar_sede([sedeCali, sedeMedellin])
-    print("-------------------")
-    print("Jugador con mayor rendimiento:")
-    print(asociacion.jugador_mayor_rendimiento())
-    print("-------------------")
-    print("Jugador con menor rendimiento:")
-    print(asociacion.jugador_menor_rendimiento())
-    print("-------------------")
-    print("Equipo con mayor rendimiento:")
-    print(asociacion.equipo_mayor_rendimiento())
-    print("-------------------")
-    print("Equipo con menor rendimiento:")
-    print(asociacion.equipo_menor_rendimiento())
-    print("-------------------")
-    print("Juagadores con mayor edad:")
-    print(asociacion.jugador_mayor_edad())
-    print("-------------------")
-    print("Juagadores con menor edad:")
-    print(asociacion.jugador_menor_edad())
-    print("-------------------")
-    print("Promedio de rendimiento:")
-    print(asociacion.promedio_rendimiento())
-    print("-------------------")
-    print("Promedio de edad:")
-    print(asociacion.promedio_edad())
+@decorador_pruebas
+def runArboles(*args, **kwargs):
+    asociacion = kwargs.get('asociacion')
+    pass

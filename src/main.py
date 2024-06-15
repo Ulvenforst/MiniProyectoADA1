@@ -19,12 +19,27 @@
 # algoritmos para clasificar sedes, equipos y jugadores de acuerdo a su rendimiento 
 # y otros criterios. Se entrega con informe, código fuente y documentación detallada 
 # sobre su ejecución y estructura de archivos.
+import sys
+from Listas.runListas import runListas
+from Listas.classes import Asociacion as ListaAsociacion, Jugador as ListaJugador, Equipo as ListaEquipo, Sede as ListaSede
+from ArbolRojiNegro.runArboles import runArboles
+from ArbolRojiNegro.classes import Asociacion as ArbolAsociacion, Jugador as ArbolJugador, Equipo as ArbolEquipo, Sede as ArbolSede
 
-from Listas import runListas
-from ArbolRojiNegro import runArboles
 
 if __name__ == "__main__":
-    # runListas() 
-    runArboles()
 
-    pass
+    with open('resultados.txt', 'w') as f:
+        original_stdout = sys.stdout
+        sys.stdout = f
+
+        print("~" * 50 + "\n")
+        print("Resultados con Listas:")
+        print("\n" + "~" * 50)
+        runListas(Asociacion=ListaAsociacion, Jugador=ListaJugador, Equipo=ListaEquipo, Sede=ListaSede)
+        print("\n\n" + "~" * 50 + "\n")
+        print("Resultados con Arboles RojiNegros:")
+        print("\n" + "~" * 50)
+        runArboles(Asociacion=ArbolAsociacion, Jugador=ArbolJugador, Equipo=ArbolEquipo, Sede=ArbolSede)
+        sys.stdout = original_stdout
+
+    print("Los resultados se han guardado en 'resultados.txt'")

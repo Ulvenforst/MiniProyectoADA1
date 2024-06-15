@@ -1,0 +1,102 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Resultados con Listas:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------
+Jugadores del equipo de futbol de Medellín:
+6: Camila Fernández (24 años) - Rendimiento: 36
+7: Mateo González (29 años) - Rendimiento: 89
+10: Luciana Sánchez (18 años) - Rendimiento: 89
+-------------------
+Jugadores del equipo de volleyball de Medellín:
+2: Valentina Rodriguez (19 años) - Rendimiento: 15
+4: Martina Martinez (30 años) - Rendimiento: 55
+3: Juan López (22 años) - Rendimiento: 78
+-------------------
+Jugadores del equipo de futbol de Cali:
+1: Alejandro Torres (27 años) - Rendimiento: 24
+9: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugadores del equipo de volleyball de Cali:
+5: Sebastián Pérez (25 años) - Rendimiento: 42
+0: Sofia García (21 años) - Rendimiento: 66
+11: Lucas Vásquez (26 años) - Rendimiento: 82
+8: Isabella Díaz (21 años) - Rendimiento: 92
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+Equipo de Futbol Medellín - Rendimiento promedio: 71.33333333333333
+-------------------
+Equipo con menor rendimiento promedio:
+Equipo de Futbol Cali - Rendimiento promedio: 40.5
+-------------------
+Jugador con mejor rendimiento:
+8: Isabella Díaz (21 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+2: Valentina Rodriguez (19 años) - Rendimiento: 15
+-------------------
+Jugador más joven:
+9: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+4: Martina Martinez (30 años) - Rendimiento: 55
+-------------------
+Promedio de edad de los jugadores:
+23.25
+-------------------
+Promedio de rendimiento de los jugadores:
+60.416666666666664
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Resultados con Arboles RojiNegros:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------
+Jugadores del equipo de futbol de Medellín:
+6: Camila Fernández (24 años) - Rendimiento: 36
+7: Mateo González (29 años) - Rendimiento: 89
+10: Luciana Sánchez (18 años) - Rendimiento: 89
+-------------------
+Jugadores del equipo de volleyball de Medellín:
+2: Valentina Rodriguez (19 años) - Rendimiento: 15
+4: Martina Martinez (30 años) - Rendimiento: 55
+3: Juan López (22 años) - Rendimiento: 78
+-------------------
+Jugadores del equipo de futbol de Cali:
+1: Alejandro Torres (27 años) - Rendimiento: 24
+9: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugadores del equipo de volleyball de Cali:
+5: Sebastián Pérez (25 años) - Rendimiento: 42
+0: Sofia García (21 años) - Rendimiento: 66
+11: Lucas Vásquez (26 años) - Rendimiento: 82
+8: Isabella Díaz (21 años) - Rendimiento: 92
+-------------------
+-------------------
+Equipo con mayor rendimiento promedio:
+Futbol Medellín
+-------------------
+Equipo con menor rendimiento promedio:
+Futbol Cali
+-------------------
+Jugador con mejor rendimiento:
+8: Isabella Díaz (21 años) - Rendimiento: 92
+-------------------
+Jugador con peor rendimiento:
+2: Valentina Rodriguez (19 años) - Rendimiento: 15
+-------------------
+Jugador más joven:
+9: Daniel Ruiz (17 años) - Rendimiento: 57
+-------------------
+Jugador más viejo:
+4: Martina Martinez (30 años) - Rendimiento: 55
+-------------------
+Promedio de edad de los jugadores:
+23.25
+-------------------
+Promedio de rendimiento de los jugadores:
+60.416666666666664

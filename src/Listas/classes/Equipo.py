@@ -49,7 +49,7 @@ class Equipo:
         return self._deporte
 
     @property
-    def jugadores(self):
+    def ranking_jugadores(self):
         """
         Getter del atributo jugadores.
 
@@ -83,7 +83,7 @@ class Equipo:
     def deporte(self, deporte):
         self._deporte = deporte
 
-    @jugadores.setter
+    @ranking_jugadores.setter
     def jugadores(self, jugadores):
         self._list_jugadores = jugadores
     
