@@ -13,7 +13,7 @@
 # INTENCIÓN: Representar una sede de la asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Equipo; una sede tiene varios equipos.
 
-from utils.decorators import manage_insertions
+from ..utils.decorators import manage_insertions
 
 M = 2      # Número máximo de equipos por sede
 

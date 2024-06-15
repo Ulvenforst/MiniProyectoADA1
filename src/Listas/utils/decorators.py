@@ -13,7 +13,7 @@
 # gestionar la inserción de entidades en las tablas hash y ordenarlas según criterios
 # específicos.
 
-from utils.sorting_algorithms import bucket_sort, counting_sort
+from ..utils.sorting_algorithms import bucket_sort, counting_sort
 
 def extraer_y_ordenar(tipo_entidad, clave, reverse=False):
     """

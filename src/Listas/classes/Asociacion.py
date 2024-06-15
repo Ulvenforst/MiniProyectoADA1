@@ -13,8 +13,8 @@
 # INTENCIÓN: Representar una asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Sede; una asociación tiene varias sedes.
 
-from utils.sorting_algorithms import bucket_sort, counting_sort
-from utils.decorators import extraer_y_ordenar, manage_insertions
+from ..utils.sorting_algorithms import counting_sort, bucket_sort
+from ..utils.decorators import extraer_y_ordenar, manage_insertions
 
 K = 2      # Número máximo de sedes en la asociación
 

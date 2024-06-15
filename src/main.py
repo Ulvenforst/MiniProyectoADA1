@@ -20,7 +20,7 @@
 # y otros criterios. Se entrega con informe, código fuente y documentación detallada 
 # sobre su ejecución y estructura de archivos.
 
-from classes import Jugador, Equipo, Sede, Asociacion
+from Listas.classes import Jugador, Equipo, Sede, Asociacion
 
 if __name__ == "__main__":
     asociacion = Asociacion()

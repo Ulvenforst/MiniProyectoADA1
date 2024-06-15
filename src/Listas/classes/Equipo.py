@@ -13,7 +13,7 @@
 # INTENCIÓN: Representar un equipo de un deporte en una sede.
 # RELACIONES: Esta clase se relaciona con la clase Jugador; un equipo tiene varios jugadores.
 
-from utils.decorators import manage_insertions
+from ..utils.decorators import manage_insertions
 
 N_min = 2  # Número mínimo de jugadores por equipo
 N_max = 4  # Número máximo de jugadores por equipo
