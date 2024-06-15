@@ -3,6 +3,7 @@
 Resultados con Listas:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PRUEBAS PDF:
 -------------------
 Jugadores del equipo de futbol de Medellín:
 6: Camila Fernández (24 años) - Rendimiento: 36
@@ -24,6 +25,7 @@ Jugadores del equipo de volleyball de Cali:
 11: Lucas Vásquez (26 años) - Rendimiento: 82
 8: Isabella Díaz (21 años) - Rendimiento: 92
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 Equipo de Futbol Medellín - Rendimiento promedio: 71.33333333333333
@@ -50,11 +52,33 @@ Promedio de rendimiento de los jugadores:
 60.416666666666664
 
 
+
+PRUEBAS DE INPUT 1:
+-------------------
+Sede Cali rendimiento promedio:
+
+
+
+PRUEBAS DE INPUT 2:
+El equipos excederá el tamaño máximo permitido de 2.
+El equipos excederá el tamaño máximo permitido de 2.
+
+
+
+PRUEBAS DE INPUT 3:
+El jugadores excederá el tamaño máximo permitido de 4.
+El jugadores excederá el tamaño máximo permitido de 4.
+El equipos excederá el tamaño máximo permitido de 2.
+El equipos excederá el tamaño máximo permitido de 2.
+El equipos excederá el tamaño máximo permitido de 2.
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Resultados con Arboles RojiNegros:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PRUEBAS PDF:
 -------------------
 Jugadores del equipo de futbol de Medellín:
 6: Camila Fernández (24 años) - Rendimiento: 36
@@ -76,6 +100,7 @@ Jugadores del equipo de volleyball de Cali:
 11: Lucas Vásquez (26 años) - Rendimiento: 82
 8: Isabella Díaz (21 años) - Rendimiento: 92
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 Futbol Medellín
@@ -100,3 +125,24 @@ Promedio de edad de los jugadores:
 -------------------
 Promedio de rendimiento de los jugadores:
 60.416666666666664
+
+
+
+PRUEBAS DE INPUT 1:
+-------------------
+Sede Cali rendimiento promedio:
+
+
+
+PRUEBAS DE INPUT 2:
+La sede Sede Cali excederá el tamaño máximo permitido de equipos.
+La sede Sede Medellin excederá el tamaño máximo permitido de equipos.
+
+
+
+PRUEBAS DE INPUT 3:
+El equipo Volleyball excederá el tamaño máximo permitido de jugadores.
+El equipo Natacion excederá el tamaño máximo permitido de jugadores.
+La sede Sede Cali excederá el tamaño máximo permitido de equipos.
+La sede Sede Medellin excederá el tamaño máximo permitido de equipos.
+La sede Sede Bogota excederá el tamaño máximo permitido de equipos.
