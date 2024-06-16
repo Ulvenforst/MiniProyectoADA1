@@ -23,6 +23,8 @@ class Asociacion:
     def __init__(self):
         self._sedes = []
         self._arbol_sedes = ArbolRojiNegro()
+        self._arbol_jugadores = ArbolRojiNegro()
+        self._arbol_jugadores_edad = ArbolRojiNegro()
 
     def agregar_sedes(self, nueva_sede):
         """

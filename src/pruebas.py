@@ -303,8 +303,8 @@ def imprimirDatos(asociacion):
                 print(f"\t\t{jugador}")
         print("-------------------")
     print("Ranking de jugadores de la asociación:")
-    # for jugador in asociacion.ranking_jugadores():
-    #     print(f"\t{jugador}")
+    for jugador in asociacion.ranking_jugadores():
+         print(f"\t{jugador}")
     print("-------------------")
     print("Equipo con mayor rendimiento promedio:")
     print(f"\t{asociacion.equipo_con_mayor_rendimiento()} - {asociacion.ranking_sedes[-1].nombre } ")
