@@ -42,11 +42,15 @@ class Asociacion:
         for sede in self._sedes:
             suma_rendimiento_equipos= 0
             for equipo in sede.equipos:
-                suma_rendimiento_jugadores = sum(jugador.rendimiento for jugador in equipo.jugadores)
+                suma_rendimiento_jugadores = 0
+                for jugador in equipo.jugadores:
+                    suma_rendimiento_jugadores += jugador.rendimiento
+                    self._arbol_jugadores.insertar(Nodo(jugador, jugador.rendimiento, jugador.edad))
+                    self._arbol_jugadores_edad.insertar(Nodo(jugador, jugador.edad, jugador.rendimiento))
                 promedio_equipo = suma_rendimiento_jugadores / len(equipo.jugadores)
                 suma_rendimiento_equipos+=promedio_equipo
             rendimiento_sede=suma_rendimiento_equipos/len(sede.equipos)
-    
+
             self._arbol_sedes.insertar(Nodo(sede, rendimiento_sede, len(sede.equipos)))
 
     @staticmethod
@@ -72,6 +76,18 @@ class Asociacion:
         """
         return self._arbol_sedes.in_orden()
     
+    def ranking_jugadores(self):
+        """
+        Retorna el ranking de jugadores de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            list: Lista de jugadores ordenados por rendimiento.
+        """
+        return self._arbol_jugadores.in_orden()
+    
     def jugador_con_mejor_rendimiento(self):
         """
         Retorna el jugador con mejor rendimiento de la asociación.
@@ -82,11 +98,7 @@ class Asociacion:
         Returns:
             Jugador: Jugador con mejor rendimiento.
         """
-        maximo = self._sedes[0].equipos[0]._arbol_jugadores.maximo()
-        for sedes in self._sedes:
-            for equipo in sedes.equipos:
-                if maximo.dato < equipo._arbol_jugadores.maximo().dato:
-                   maximo=equipo._arbol_jugadores.maximo()
+        maximo = self._arbol_jugadores.maximo()
         return maximo
 
     def jugador_con_peor_rendimiento(self):
@@ -99,12 +111,9 @@ class Asociacion:
         Returns:
             Jugador: Jugador con peor rendimiento.
         """
-        minimo = self._sedes[0].equipos[0]._arbol_jugadores.minimo()
-        for sedes in self._sedes:
-            for equipo in sedes.equipos:
-                if minimo.dato > equipo._arbol_jugadores.minimo().dato:
-                   minimo=equipo._arbol_jugadores.minimo()
+        minimo = self._arbol_jugadores.minimo()
         return minimo
+
 
     def equipo_con_mayor_rendimiento(self):
         """
