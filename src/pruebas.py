@@ -268,14 +268,14 @@ def decorador_pruebas(func):
 
 def imprimirDatos(asociacion):
     print("-------------------")
-    # for sede in asociacion.ranking_sedes:
-    #     print("Sede: ", sede.nombre)
-    #     for equipo in sede.ranking_equipos:
-    #         print("\tEquipo: ", equipo.deporte)
-    #         for jugador in equipo.ranking_jugadores:
-    #             print(f"\t\t{jugador}")
-    #     print("-------------------")
-    # print("Ranking de jugadores de la asociación:")
+    for sede in asociacion.ranking_sedes:
+        print("Sede: ", sede.nombre)
+        for equipo in sede.ranking_equipos:
+            print("\tEquipo: ", equipo)
+            for jugador in equipo.ranking_jugadores:
+                print(f"\t\t{jugador}")
+        print("-------------------")
+    print("Ranking de jugadores de la asociación:")
     # for jugador in asociacion.ranking_jugadores():
     #     print(f"\t{jugador}")
     print("-------------------")

@@ -34,7 +34,7 @@ class Sede:
         for equipo in self.equipos:
             suma_rendimiento_jugadores = sum(jugador.rendimiento for jugador in equipo.jugadores)
             promedio_equipo = suma_rendimiento_jugadores / len(equipo.jugadores)
-            self._arbol_equipos.insertar(Nodo(equipo.deporte, promedio_equipo, len(equipo.jugadores)))
+            self._arbol_equipos.insertar(Nodo(equipo, promedio_equipo, len(equipo.jugadores)))
 
     @property
     def ranking_equipos(self):

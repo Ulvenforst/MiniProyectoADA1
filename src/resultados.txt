@@ -7,6 +7,26 @@ Resultados con Listas:
 
 PRUEBAS DE INPUT 1:
 -------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 47.666666666666664
+		4: Ana (23 años) - Rendimiento: 25
+		6: Laura (25 años) - Rendimiento: 52
+		5: Carlos (24 años) - Rendimiento: 66
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 69.66666666666667
+		3: Pedro (22 años) - Rendimiento: 21
+		2: Maria (21 años) - Rendimiento: 94
+		1: Juan (20 años) - Rendimiento: 94
+-------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 71.0
+		7: Jose (26 años) - Rendimiento: 48
+		8: Luis (27 años) - Rendimiento: 73
+		9: Sara (28 años) - Rendimiento: 92
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 80.33333333333333
+		10: Jorge (29 años) - Rendimiento: 51
+		11: Lorena (30 años) - Rendimiento: 90
+		12: Raul (31 años) - Rendimiento: 100
+-------------------
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Volleyball - Rendimiento promedio: 80.33333333333333 - Sede Medellin 
@@ -34,6 +54,36 @@ Promedio de rendimiento de los jugadores:
 
 
 PRUEBAS DE INPUT 2:
+-------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 40.5
+		2: Alejandro Torres (27 años) - Rendimiento: 24
+		10: Daniel Ruiz (17 años) - Rendimiento: 57
+	Equipo:  Equipo de Basketball - Rendimiento promedio: 54.75
+		15: Santiago Rodriguez (23 años) - Rendimiento: 32
+		13: william hernandez (30 años) - Rendimiento: 44
+		16: Maria Gonzalez (28 años) - Rendimiento: 65
+		14: Laura Perez (20 años) - Rendimiento: 78
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 70.5
+		6: Sebastian Perez (25 años) - Rendimiento: 42
+		1: Sofia Garcia (21 años) - Rendimiento: 66
+		12: Lucas Vasquez (26 años) - Rendimiento: 82
+		9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 49.333333333333336
+		3: Valentina Rodriguez (19 años) - Rendimiento: 15
+		5: Martina Martinez (30 años) - Rendimiento: 55
+		4: Juan Lopez (22 años) - Rendimiento: 78
+	Equipo:  Equipo de Basketball - Rendimiento promedio: 62.75
+		18: Valeria Martinez (21 años) - Rendimiento: 45
+		20: Sara Hernandez (22 años) - Rendimiento: 56
+		17: Carlos Lopez (19 años) - Rendimiento: 72
+		19: Andres Perez (30 años) - Rendimiento: 78
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 71.33333333333333
+		7: Camila Fernandez (24 años) - Rendimiento: 36
+		8: Mateo Gonzalez (29 años) - Rendimiento: 89
+		11: Luciana Sanchez (18 años) - Rendimiento: 89
 -------------------
 -------------------
 Equipo con mayor rendimiento promedio:
@@ -63,6 +113,87 @@ Promedio de rendimiento de los jugadores:
 
 PRUEBAS DE INPUT 3:
 -------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Basketball - Rendimiento promedio: 37.0
+		60: Diana Herrera (26 años) - Rendimiento: 11
+		6: Sebastian Perez (25 años) - Rendimiento: 42
+		22: Gabriela Ramos (24 años) - Rendimiento: 43
+		29: Ricardo Ruiz (30 años) - Rendimiento: 52
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 50.333333333333336
+		13: william hernandez (30 años) - Rendimiento: 44
+		31: Emilio Molina (19 años) - Rendimiento: 46
+		41: Manuel Silva (23 años) - Rendimiento: 61
+	Equipo:  Equipo de Natacion - Rendimiento promedio: 58.2
+		23: Adrian Torres (22 años) - Rendimiento: 15
+		5: Martina Martinez (30 años) - Rendimiento: 55
+		34: Rosa Moreno (23 años) - Rendimiento: 68
+		44: Carolina Ramirez (25 años) - Rendimiento: 69
+		56: Carmen Martinez (30 años) - Rendimiento: 84
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 66.5
+		7: Camila Fernandez (24 años) - Rendimiento: 36
+		30: Victoria Leon (25 años) - Rendimiento: 59
+		45: Martin Fernandez (21 años) - Rendimiento: 83
+		42: Paula Garcia (28 años) - Rendimiento: 88
+	Equipo:  Equipo de Tenis - Rendimiento promedio: 68.25
+		43: Jorge Torres (27 años) - Rendimiento: 47
+		35: Oscar Gutierrez (26 años) - Rendimiento: 60
+		14: Laura Perez (20 años) - Rendimiento: 78
+		55: Raul Romero (27 años) - Rendimiento: 88
+-------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 49.0
+		2: Alejandro Torres (27 años) - Rendimiento: 24
+		40: Elena Cruz (27 años) - Rendimiento: 41
+		16: Maria Gonzalez (28 años) - Rendimiento: 65
+		49: Alberto Mendoza (30 años) - Rendimiento: 66
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 58.0
+		26: Fernanda Ortiz (26 años) - Rendimiento: 33
+		50: Patricia Guzman (42 años) - Rendimiento: 37
+		18: Valeria Martinez (21 años) - Rendimiento: 45
+		38: Lucia Alvarez (19 años) - Rendimiento: 49
+		17: Carlos Lopez (19 años) - Rendimiento: 72
+		51: Eduardo Alvarez (22 años) - Rendimiento: 78
+		9: Isabella Diaz (40 años) - Rendimiento: 92
+	Equipo:  Equipo de Basketball - Rendimiento promedio: 59.75
+		54: Veronica Castillo (25 años) - Rendimiento: 45
+		39: Rodrigo Martinez (28 años) - Rendimiento: 63
+		27: Pablo Ramirez (27 años) - Rendimiento: 65
+		1: Sofia Garcia (21 años) - Rendimiento: 66
+	Equipo:  Equipo de Natacion - Rendimiento promedio: 60.25
+		15: Santiago Rodriguez (23 años) - Rendimiento: 32
+		20: Sara Hernandez (22 años) - Rendimiento: 56
+		59: Hector Peña (28 años) - Rendimiento: 76
+		37: Miguel Diaz (21 años) - Rendimiento: 77
+	Equipo:  Equipo de Tenis - Rendimiento promedio: 63.75
+		33: Leonardo Delgado (22 años) - Rendimiento: 54
+		10: Daniel Ruiz (17 años) - Rendimiento: 57
+		48: Alicia Ortega (26 años) - Rendimiento: 66
+		19: Andres Perez (30 años) - Rendimiento: 78
+-------------------
+Sede:  Sede Bogota
+	Equipo:  Equipo de Natacion - Rendimiento promedio: 48.666666666666664
+		3: Valentina Rodriguez (19 años) - Rendimiento: 15
+		36: Daniela Romero (24 años) - Rendimiento: 58
+		47: Antonio Vasquez (28 años) - Rendimiento: 73
+	Equipo:  Equipo de Volleyball - Rendimiento promedio: 53.0
+		52: Teresa Morales (29 años) - Rendimiento: 14
+		21: Diego Castro (23 años) - Rendimiento: 67
+		4: Juan Lopez (22 años) - Rendimiento: 78
+	Equipo:  Equipo de Basketball - Rendimiento promedio: 60.0
+		46: Sofia Ruiz (39 años) - Rendimiento: 34
+		53: Luis Gutierrez (36 años) - Rendimiento: 57
+		11: Luciana Sanchez (18 años) - Rendimiento: 89
+	Equipo:  Equipo de Futbol - Rendimiento promedio: 65.0
+		58: Ana Campos (29 años) - Rendimiento: 12
+		32: Andrea Herrera (20 años) - Rendimiento: 75
+		25: Ivan Vargas (29 años) - Rendimiento: 84
+		8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	Equipo:  Equipo de Tenis - Rendimiento promedio: 65.5
+		24: Natalia Gomez (21 años) - Rendimiento: 39
+		57: Marcos Soto (32 años) - Rendimiento: 62
+		28: Julia Sanchez (28 años) - Rendimiento: 79
+		12: Lucas Vasquez (26 años) - Rendimiento: 82
+-------------------
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Tenis - Rendimiento promedio: 68.25 - Sede Bogota 
@@ -90,6 +221,7 @@ Promedio de rendimiento de los jugadores:
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Resultados con Arboles RojiNegros:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,12 +229,32 @@ Resultados con Arboles RojiNegros:
 
 PRUEBAS DE INPUT 1:
 -------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Volleyball
+		4: Ana (23 años) - Rendimiento: 25
+		6: Laura (25 años) - Rendimiento: 52
+		5: Carlos (24 años) - Rendimiento: 66
+	Equipo:  Equipo de Futbol
+		3: Pedro (22 años) - Rendimiento: 21
+		2: Maria (21 años) - Rendimiento: 94
+		1: Juan (20 años) - Rendimiento: 94
+-------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Futbol
+		7: Jose (26 años) - Rendimiento: 48
+		8: Luis (27 años) - Rendimiento: 73
+		9: Sara (28 años) - Rendimiento: 92
+	Equipo:  Equipo de Volleyball
+		10: Jorge (29 años) - Rendimiento: 51
+		11: Lorena (30 años) - Rendimiento: 90
+		12: Raul (31 años) - Rendimiento: 100
+-------------------
 -------------------
 Equipo con mayor rendimiento promedio:
-	Volleyball - Sede Medellin 
+	Equipo de Volleyball - Sede Medellin 
 -------------------
 Equipo con menor rendimiento promedio:
-	Volleyball - Sede Cali 
+	Equipo de Volleyball - Sede Cali 
 -------------------
 Jugador con mejor rendimiento:
 	12: Raul (31 años) - Rendimiento: 100
@@ -125,12 +277,42 @@ Promedio de rendimiento de los jugadores:
 
 PRUEBAS DE INPUT 2:
 -------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Futbol
+		2: Alejandro Torres (27 años) - Rendimiento: 24
+		10: Daniel Ruiz (17 años) - Rendimiento: 57
+	Equipo:  Equipo de Basketball
+		15: Santiago Rodriguez (23 años) - Rendimiento: 32
+		13: william hernandez (30 años) - Rendimiento: 44
+		16: Maria Gonzalez (28 años) - Rendimiento: 65
+		14: Laura Perez (20 años) - Rendimiento: 78
+	Equipo:  Equipo de Volleyball
+		6: Sebastian Perez (25 años) - Rendimiento: 42
+		1: Sofia Garcia (21 años) - Rendimiento: 66
+		12: Lucas Vasquez (26 años) - Rendimiento: 82
+		9: Isabella Diaz (40 años) - Rendimiento: 92
+-------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Volleyball
+		3: Valentina Rodriguez (19 años) - Rendimiento: 15
+		5: Martina Martinez (30 años) - Rendimiento: 55
+		4: Juan Lopez (22 años) - Rendimiento: 78
+	Equipo:  Equipo de Basketball
+		18: Valeria Martinez (21 años) - Rendimiento: 45
+		20: Sara Hernandez (22 años) - Rendimiento: 56
+		17: Carlos Lopez (19 años) - Rendimiento: 72
+		19: Andres Perez (30 años) - Rendimiento: 78
+	Equipo:  Equipo de Futbol
+		7: Camila Fernandez (24 años) - Rendimiento: 36
+		8: Mateo Gonzalez (29 años) - Rendimiento: 89
+		11: Luciana Sanchez (18 años) - Rendimiento: 89
+-------------------
 -------------------
 Equipo con mayor rendimiento promedio:
-	Futbol - Sede Medellin 
+	Equipo de Futbol - Sede Medellin 
 -------------------
 Equipo con menor rendimiento promedio:
-	Futbol - Sede Cali 
+	Equipo de Futbol - Sede Cali 
 -------------------
 Jugador con mejor rendimiento:
 	9: Isabella Diaz (40 años) - Rendimiento: 92
@@ -153,12 +335,93 @@ Promedio de rendimiento de los jugadores:
 
 PRUEBAS DE INPUT 3:
 -------------------
+Sede:  Sede Medellin
+	Equipo:  Equipo de Basketball
+		60: Diana Herrera (26 años) - Rendimiento: 11
+		6: Sebastian Perez (25 años) - Rendimiento: 42
+		22: Gabriela Ramos (24 años) - Rendimiento: 43
+		29: Ricardo Ruiz (30 años) - Rendimiento: 52
+	Equipo:  Equipo de Volleyball
+		13: william hernandez (30 años) - Rendimiento: 44
+		31: Emilio Molina (19 años) - Rendimiento: 46
+		41: Manuel Silva (23 años) - Rendimiento: 61
+	Equipo:  Equipo de Natacion
+		23: Adrian Torres (22 años) - Rendimiento: 15
+		5: Martina Martinez (30 años) - Rendimiento: 55
+		34: Rosa Moreno (23 años) - Rendimiento: 68
+		44: Carolina Ramirez (25 años) - Rendimiento: 69
+		56: Carmen Martinez (30 años) - Rendimiento: 84
+	Equipo:  Equipo de Futbol
+		7: Camila Fernandez (24 años) - Rendimiento: 36
+		30: Victoria Leon (25 años) - Rendimiento: 59
+		45: Martin Fernandez (21 años) - Rendimiento: 83
+		42: Paula Garcia (28 años) - Rendimiento: 88
+	Equipo:  Equipo de Tenis
+		43: Jorge Torres (27 años) - Rendimiento: 47
+		35: Oscar Gutierrez (26 años) - Rendimiento: 60
+		14: Laura Perez (20 años) - Rendimiento: 78
+		55: Raul Romero (27 años) - Rendimiento: 88
+-------------------
+Sede:  Sede Cali
+	Equipo:  Equipo de Futbol
+		2: Alejandro Torres (27 años) - Rendimiento: 24
+		40: Elena Cruz (27 años) - Rendimiento: 41
+		16: Maria Gonzalez (28 años) - Rendimiento: 65
+		49: Alberto Mendoza (30 años) - Rendimiento: 66
+	Equipo:  Equipo de Volleyball
+		26: Fernanda Ortiz (26 años) - Rendimiento: 33
+		50: Patricia Guzman (42 años) - Rendimiento: 37
+		18: Valeria Martinez (21 años) - Rendimiento: 45
+		38: Lucia Alvarez (19 años) - Rendimiento: 49
+		17: Carlos Lopez (19 años) - Rendimiento: 72
+		51: Eduardo Alvarez (22 años) - Rendimiento: 78
+		9: Isabella Diaz (40 años) - Rendimiento: 92
+	Equipo:  Equipo de Basketball
+		54: Veronica Castillo (25 años) - Rendimiento: 45
+		39: Rodrigo Martinez (28 años) - Rendimiento: 63
+		27: Pablo Ramirez (27 años) - Rendimiento: 65
+		1: Sofia Garcia (21 años) - Rendimiento: 66
+	Equipo:  Equipo de Natacion
+		15: Santiago Rodriguez (23 años) - Rendimiento: 32
+		20: Sara Hernandez (22 años) - Rendimiento: 56
+		59: Hector Peña (28 años) - Rendimiento: 76
+		37: Miguel Diaz (21 años) - Rendimiento: 77
+	Equipo:  Equipo de Tenis
+		33: Leonardo Delgado (22 años) - Rendimiento: 54
+		10: Daniel Ruiz (17 años) - Rendimiento: 57
+		48: Alicia Ortega (26 años) - Rendimiento: 66
+		19: Andres Perez (30 años) - Rendimiento: 78
+-------------------
+Sede:  Sede Bogota
+	Equipo:  Equipo de Natacion
+		3: Valentina Rodriguez (19 años) - Rendimiento: 15
+		36: Daniela Romero (24 años) - Rendimiento: 58
+		47: Antonio Vasquez (28 años) - Rendimiento: 73
+	Equipo:  Equipo de Volleyball
+		52: Teresa Morales (29 años) - Rendimiento: 14
+		21: Diego Castro (23 años) - Rendimiento: 67
+		4: Juan Lopez (22 años) - Rendimiento: 78
+	Equipo:  Equipo de Basketball
+		46: Sofia Ruiz (39 años) - Rendimiento: 34
+		53: Luis Gutierrez (36 años) - Rendimiento: 57
+		11: Luciana Sanchez (18 años) - Rendimiento: 89
+	Equipo:  Equipo de Futbol
+		58: Ana Campos (29 años) - Rendimiento: 12
+		32: Andrea Herrera (20 años) - Rendimiento: 75
+		25: Ivan Vargas (29 años) - Rendimiento: 84
+		8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	Equipo:  Equipo de Tenis
+		24: Natalia Gomez (21 años) - Rendimiento: 39
+		57: Marcos Soto (32 años) - Rendimiento: 62
+		28: Julia Sanchez (28 años) - Rendimiento: 79
+		12: Lucas Vasquez (26 años) - Rendimiento: 82
+-------------------
 -------------------
 Equipo con mayor rendimiento promedio:
-	Tenis - Sede Bogota 
+	Equipo de Tenis - Sede Bogota 
 -------------------
 Equipo con menor rendimiento promedio:
-	Basketball - Sede Medellin 
+	Equipo de Basketball - Sede Medellin 
 -------------------
 Jugador con mejor rendimiento:
 	9: Isabella Diaz (40 años) - Rendimiento: 92

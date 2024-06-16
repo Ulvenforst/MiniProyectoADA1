@@ -14,8 +14,8 @@
 # RELACIONES: No tiene.
 
 class Nodo(object):
-    def __init__(self, jugador, dato, factor_desempate):
-        self.jugador = jugador
+    def __init__(self, entidad, dato, factor_desempate):
+        self.entidad = entidad
         self.dato = dato
         self.factor_desempate = factor_desempate
         self.color = 0
@@ -25,8 +25,20 @@ class Nodo(object):
 
     @property
     def nombre(self):
-        return f"{self.jugador}"
+        return f"{self.entidad}"
+
+    @property
+    def ranking_equipos(self):
+        return self.entidad.ranking_equipos
+
+    @property
+    def ranking_jugadores(self):
+        return self.entidad.ranking_jugadores
+
+    @property
+    def nombre(self):
+        return self.entidad.nombre
 
     def __str__(self):
-        return f"{self.jugador}"
+        return f"{self.entidad}"
 

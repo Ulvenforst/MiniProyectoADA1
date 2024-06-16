@@ -35,7 +35,7 @@ if __name__ == "__main__":
         print("Resultados con Listas:")
         print("\n" + "~" * 50)
         runListas(Asociacion=ListaAsociacion, Jugador=ListaJugador, Equipo=ListaEquipo, Sede=ListaSede)
-        print("\n\n" + "~" * 50)
+        print("\n\n" + "~" * 50 + "\n")
         print("Resultados con Arboles RojiNegros:")
         print("\n" + "~" * 50)
         runArboles(Asociacion=ArbolAsociacion, Jugador=ArbolJugador, Equipo=ArbolEquipo, Sede=ArbolSede)

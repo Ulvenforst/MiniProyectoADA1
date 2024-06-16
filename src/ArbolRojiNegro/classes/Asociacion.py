@@ -39,7 +39,7 @@ class Asociacion:
                 suma_rendimiento_equipos+=promedio_equipo
             rendimiento_sede=suma_rendimiento_equipos/len(sede.equipos)
     
-            self._arbol_sedes.insertar(Nodo(sede.nombre, rendimiento_sede, len(sede.equipos)))
+            self._arbol_sedes.insertar(Nodo(sede, rendimiento_sede, len(sede.equipos)))
 
     def resetear_datos():
         """
