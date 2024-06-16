@@ -27,6 +27,15 @@ class Equipo:
         self._arbol_jugadores_edad = ArbolRojiNegro()
 
     def agregar_jugadores(self, nuevos_jugadores):
+        """
+        Agrega nuevos jugadores al equipo.
+
+        Args:
+            nuevos_jugadores (list): Lista de jugadores a agregar.
+
+        Returns:
+            None
+        """
         if len(self._jugadores) + len(nuevos_jugadores) > N_max:
             print(f"El equipo {self._deporte} excederá el tamaño máximo permitido de jugadores.")
             return
@@ -41,14 +50,32 @@ class Equipo:
 
     @property
     def ranking_jugadores(self):
+        """
+        Getter para el ranking de jugadores del equipo.
+
+        Returns:
+            list: Lista de jugadores ordenados por rendimiento.
+        """
         return self._arbol_jugadores.in_orden()
 
     @property
     def deporte(self):
+        """
+        Getter para el deporte del equipo.
+
+        Returns:
+            str: Deporte del equipo.
+        """
         return self._deporte
 
     @property
     def jugadores(self):
+        """
+        Getter para los jugadores del equipo.
+
+        Returns:
+            list: Lista de jugadores del equipo.
+        """
         return self._jugadores
 
     @deporte.setter
@@ -59,5 +86,6 @@ class Equipo:
     def jugadores(self, jugadores):
         self._jugadores = jugadores
 
+    # Métodos mágicos
     def __str__(self):
         return f"Equipo de {self._deporte}"

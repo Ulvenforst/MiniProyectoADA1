@@ -1,3 +1,18 @@
+################################################################################
+# Archivo: pruebas.py                                                          #
+# Autores: Julián Ernesto Puyo Mora 2226905                                    #
+#          Laura Camila Betancourt Horta 2223435                               #
+#          Jhoan Felipe León Correa 2228527                                    #
+#          Juan Camilo Narváez Tascón 2140112                                  #
+# Fecha de creación: 06/15/2024                                                #
+# Fecha de última modificación: 06/16/2024                                     #
+# Licencia: GNU-GPL                                                            #
+################################################################################
+
+# HISTORIA: Este archivo contiene el decorador que se encarga de ejecutar las pruebas
+# de la aplicación y de medir el tiempo de ejecución de cada una de ellas. Estas
+# pruebas se aplican sobre ambas estructuras de datos, y son las dadas por el profesor.
+
 import time
 
 def decorador_pruebas(func):
@@ -81,7 +96,6 @@ def decorador_pruebas(func):
         # print("Promedio de rendimiento de los jugadores:")
         # print(asociacion.promedio_rendimiento_jugadores())
 
-        print("\n")
         print("PRUEBAS DE INPUT 1:")
         Asociacion.resetear_datos()
         inicio = time.time()

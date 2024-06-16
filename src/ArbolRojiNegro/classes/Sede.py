@@ -13,7 +13,6 @@
 # INTENCIÓN: Representar una sede de la asociación de deportes.
 # RELACIONES: Esta clase se relaciona con la clase Equipo; una sede tiene varios equipos.
 
-from .Equipo import Equipo 
 from ..data_structures.ArbolRojiNegro import ArbolRojiNegro
 from ..data_structures.Nodo import Nodo
 
@@ -26,6 +25,15 @@ class Sede:
         self._arbol_equipos = ArbolRojiNegro()
 
     def agregar_equipos(self, nuevos_equipos):
+        """
+        Agrega nuevos equipos a la sede.
+
+        Args:
+            nuevos_equipos (list): Lista de equipos a agregar.
+
+        Returns:
+            None
+        """
         if len(self._equipos) + len(nuevos_equipos) > M:
             print(f"La sede {self._nombre} excederá el tamaño máximo permitido de equipos.")
             return
@@ -38,14 +46,32 @@ class Sede:
 
     @property
     def ranking_equipos(self):
+        """
+        Getter para el ranking de equipos de la sede.
+
+        Returns:
+            list: Lista de equipos ordenados por rendimiento.
+        """
         return self._arbol_equipos.in_orden()
 
     @property
     def nombre(self):
+        """
+        Getter del atributo nombre.
+
+        Returns:
+            str: Nombre de la sede.
+        """
         return self._nombre
     
     @property
     def equipos(self):
+        """
+        Getter del atributo equipos.
+
+        Returns:
+            list: Lista de equipos de la sede.
+        """
         return self._equipos
 
     @nombre.setter

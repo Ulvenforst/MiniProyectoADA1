@@ -1,9 +1,15 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Resultados con Listas:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+##################################################
+# Archivo: resultados.txt                         
+# Autores: Julián Ernesto Puyo Mora 2226905       
+#          Laura Camila Betancourt Horta 2223435  
+#          Jhoan Felipe León Correa 2228527       
+#          Juan Camilo Narváez Tascón 2140112     
+# Licencia: GNU-GPL                               
+##################################################
+              
+========
+ LISTAS:
+========
 
 PRUEBAS DE INPUT 1:
 -------------------
@@ -222,13 +228,9 @@ Promedio de edad de los jugadores:
 Promedio de rendimiento de los jugadores:
 	57.88333333333333
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Resultados con Arboles RojiNegros:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+====================
+ Árboles Rojinegros: 
+====================
 
 PRUEBAS DE INPUT 1:
 -------------------

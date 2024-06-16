@@ -24,20 +24,35 @@ class Nodo(object):
         self.padre = None
 
     @property
-    def nombre(self):
-        return f"{self.entidad}"
-
-    @property
     def ranking_equipos(self):
+        """
+        Getter para el ranking de equipos de la sede. Funciona como By-pass.
+
+        Returns:
+            list: Lista de equipos ordenados por rendimiento.
+        """
         return self.entidad.ranking_equipos
 
     @property
     def ranking_jugadores(self):
+        """
+        Getter para el ranking de jugadores de la sede. Funciona como By-pass.
+
+        Returns:
+            list: Lista de jugadores ordenados por rendimiento.
+        """
         return self.entidad.ranking_jugadores
 
     @property
     def nombre(self):
+        """
+        Getter del atributo nombre.
+
+        Returns:
+            str: Nombre de la entidad.
+        """
         return self.entidad.nombre
 
+    # Métodos mágicos
     def __str__(self):
         return f"{self.entidad}"

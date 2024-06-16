@@ -48,6 +48,7 @@ class Asociacion:
         self._list_jugadores = self.ordenar_entidades(self._list_jugadores, key='rendimiento')
         return self._list_jugadores
     
+    @staticmethod
     def resetear_datos():
         """
         Reinicia los datos de la asociación.
@@ -55,7 +56,7 @@ class Asociacion:
         Returns:
             None
         """
-        Jugador.reset_contador()
+        Jugador._reset_contador()
 
     def jugador_con_mejor_rendimiento(self):
         """

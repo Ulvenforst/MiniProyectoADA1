@@ -14,7 +14,8 @@
 # RELACIONES: Esta clase no tiene relaciones con otras clases.
 
 class Jugador:
-    contador = 0  # Contador automático
+    contador = 0  # Contador automático del ID de los jugadores
+
     def __init__(self, nombre, edad, rendimiento):
         Jugador.contador += 1
         self._identificador = Jugador.contador
@@ -22,7 +23,14 @@ class Jugador:
         self._edad = edad
         self._rendimiento = rendimiento
 
-    def reset_contador():
+    @staticmethod
+    def _reset_contador():
+        """
+        Reinicia el contador de jugadores.
+
+        Returns:
+            None
+        """
         Jugador.contador = 0
 
     @property

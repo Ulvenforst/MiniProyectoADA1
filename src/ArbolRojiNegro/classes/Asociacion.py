@@ -15,7 +15,6 @@
 
 from ..data_structures.ArbolRojiNegro   import ArbolRojiNegro
 from ..data_structures.Nodo             import Nodo
-from ..classes.Sede                     import Sede
 from .Jugador                           import Jugador
 
 K = 10 # Número máximo de sedes permitidas en la asociación.
@@ -26,6 +25,15 @@ class Asociacion:
         self._arbol_sedes = ArbolRojiNegro()
 
     def agregar_sedes(self, nueva_sede):
+        """
+        Agrega una nueva sede a la asociación.
+
+        Args:
+            nueva_sede (Sede): Sede a agregar.
+
+        Returns:
+            None
+        """
         if len(self._sedes) + len(nueva_sede) > K:
             print(f"La sede {self._nombre} excederá el tamaño máximo permitido de Sedes.")
             return
@@ -41,6 +49,7 @@ class Asociacion:
     
             self._arbol_sedes.insertar(Nodo(sede, rendimiento_sede, len(sede.equipos)))
 
+    @staticmethod
     def resetear_datos():
         """
         Reinicia los datos de la asociación.
@@ -48,13 +57,31 @@ class Asociacion:
         Returns:
             None
         """
-        Jugador.reset_contador()
+        Jugador._reset_contador()
 
     @property
     def ranking_sedes(self):
+        """
+        Retorna el ranking de sedes de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            list: Lista de sedes ordenadas por rendimiento.
+        """
         return self._arbol_sedes.in_orden()
     
     def jugador_con_mejor_rendimiento(self):
+        """
+        Retorna el jugador con mejor rendimiento de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Jugador: Jugador con mejor rendimiento.
+        """
         maximo = self._sedes[0].equipos[0]._arbol_jugadores.maximo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -63,6 +90,15 @@ class Asociacion:
         return maximo
 
     def jugador_con_peor_rendimiento(self):
+        """
+        Retorna el jugador con peor rendimiento de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Jugador: Jugador con peor rendimiento.
+        """
         minimo = self._sedes[0].equipos[0]._arbol_jugadores.minimo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -71,6 +107,15 @@ class Asociacion:
         return minimo
 
     def equipo_con_mayor_rendimiento(self):
+        """
+        Retorna el equipo con mayor rendimiento de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Equipo: Equipo con mayor rendimiento.
+        """
         maximo = self._sedes[0]._arbol_equipos.maximo()
         for sede in self._sedes:
             if maximo.dato < sede._arbol_equipos.maximo().dato:
@@ -78,6 +123,15 @@ class Asociacion:
         return maximo
 
     def equipo_con_menor_rendimiento(self):
+        """
+        Retorna el equipo con menor rendimiento de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Equipo: Equipo con menor rendimiento.
+        """
         minimo = self._sedes[0]._arbol_equipos.minimo()
         for sede in self._sedes:
             if minimo.dato > sede._arbol_equipos.minimo().dato:
@@ -85,6 +139,15 @@ class Asociacion:
         return minimo
     
     def jugador_mas_viejo(self):
+        """
+        Retorna el jugador más viejo de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Jugador: Jugador más viejo.
+        """
         maximo = self._sedes[0].equipos[0]._arbol_jugadores_edad.maximo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -93,6 +156,15 @@ class Asociacion:
         return maximo
 
     def jugador_mas_joven(self):
+        """
+        Retorna el jugador más joven de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            Jugador: Jugador más joven.
+        """
         minimo = self._sedes[0].equipos[0]._arbol_jugadores_edad.minimo()
         for sedes in self._sedes:
             for equipo in sedes.equipos:
@@ -101,6 +173,15 @@ class Asociacion:
         return minimo
          
     def promedio_rendimiento_jugadores(self):
+        """
+        Retorna el promedio de rendimiento de los jugadores de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            float: Promedio de rendimiento de los jugadores.
+        """
         longitud=0
         suma=0
         for sede in self._sedes:
@@ -112,6 +193,15 @@ class Asociacion:
         return promedio
 
     def promedio_edad_jugadores(self):
+        """
+        Retorna el promedio de edad de los jugadores de la asociación.
+
+        Args:
+            None
+
+        Returns:
+            float: Promedio de edad de los jugadores.
+        """
         longitud=0
         suma=0
         for sede in self._sedes:
@@ -124,5 +214,11 @@ class Asociacion:
                  
     @property
     def sedes(self):
+        """
+        Getter de sedes.
+
+        Returns:
+            list: Lista de sedes.
+        """
         return self._sedes
 

@@ -17,8 +17,16 @@ class ArbolRojiNegro(object):
     def __init__(self):
         self.raiz = None
 
-    # Rotacion a la izquierda
     def rotar_izq(self, x):
+        """
+        Hace una rotación a la izquierda del nodo x en el árbol rojinegro.
+
+        Args:
+            x (Nodo): Nodo a rotar.
+
+        Returns:
+            None
+        """
         y = x.der               # y es el hijo derecho de x
         x.der = y.izq           # el hijo derecho de x sera el hijo izquierdo de y
         if y.izq:               # comprobar si y.izq no es None
@@ -33,8 +41,16 @@ class ArbolRojiNegro(object):
         y.izq = x               # x es el hijo izquierdo de y
         x.padre = y             # y es el padre de x
 
-    # Rotacion a la derecha
     def rotar_der(self, y):
+        """
+        Hace una rotación a la derecha del nodo y en el árbol rojinegro.
+
+        Args:
+            y (Nodo): Nodo a rotar.
+
+        Returns:
+            None
+        """
         x = y.izq               
         y.izq = x.der           
         if x.der:               
@@ -49,8 +65,16 @@ class ArbolRojiNegro(object):
         x.der = y               
         y.padre = x             
 
-    # Insertar nodo
     def insertar(self, nodo):
+        """
+        Inserta un nodo en el árbol rojinegro y ajusta el árbol.
+
+        Args:
+            nodo (Nodo): Nodo a insertar.
+
+        Returns:
+            None
+        """
         if self.raiz is None:
             self.raiz = nodo
             nodo.color = 1
@@ -106,8 +130,17 @@ class ArbolRojiNegro(object):
 
         self.raiz.color = 1
 
-    # Mostrar arbol inorden
     def in_orden(self, nodo=None, resultado=None):
+        """
+        Realiza un recorrido inorden del árbol rojinegro.
+
+        Args:
+            nodo (Nodo): Nodo a partir del cual se realiza el recorrido.
+            resultado (list): Lista con los nodos del árbol en orden.
+
+        Returns:
+            list: Lista con los nodos del árbol en orden.
+        """
         if resultado is None:
             resultado = []
         if nodo is None:
@@ -125,6 +158,16 @@ class ArbolRojiNegro(object):
         return resultado
     
     def in_values(self, nodo=None, resultado=None):
+        """
+        Realiza un recorrido inorden del árbol rojinegro y retorna los valores de los nodos.
+
+        Args:
+            nodo (Nodo): Nodo a partir del cual se realiza el recorrido.
+            resultado (list): Lista con los valores de los nodos del árbol en orden.
+
+        Returns:
+            list: Lista con los valores de los nodos del árbol en orden.
+        """
         if resultado is None:
             resultado = []
         if nodo is None:
@@ -142,12 +185,30 @@ class ArbolRojiNegro(object):
         return resultado
     
     def minimo(self):
+        """
+        Retorna el nodo con el valor mínimo del árbol rojinegro.
+
+        Args:
+            None
+
+        Returns:
+            Nodo: Nodo con el valor mínimo del árbol.
+        """
         nodo_actual = self.raiz
         while nodo_actual.izq is not None:
             nodo_actual = nodo_actual.izq
         return nodo_actual    
     
     def maximo(self):
+        """
+        Retorna el nodo con el valor máximo del árbol rojinegro.
+
+        Args:
+            None
+
+        Returns:
+            Nodo: Nodo con el valor máximo del árbol.
+        """
         nodo_actual = self.raiz
         while nodo_actual.der is not None:
             nodo_actual = nodo_actual.der
