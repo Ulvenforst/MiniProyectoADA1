@@ -34,6 +34,18 @@ Sede:  Sede Medellin
 		12: Raul (31 años) - Rendimiento: 100
 -------------------
 Ranking de jugadores de la asociación:
+	3: Pedro (22 años) - Rendimiento: 21
+	4: Ana (23 años) - Rendimiento: 25
+	7: Jose (26 años) - Rendimiento: 48
+	10: Jorge (29 años) - Rendimiento: 51
+	6: Laura (25 años) - Rendimiento: 52
+	5: Carlos (24 años) - Rendimiento: 66
+	8: Luis (27 años) - Rendimiento: 73
+	11: Lorena (30 años) - Rendimiento: 90
+	9: Sara (28 años) - Rendimiento: 92
+	2: Maria (21 años) - Rendimiento: 94
+	1: Juan (20 años) - Rendimiento: 94
+	12: Raul (31 años) - Rendimiento: 100
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Volleyball - Rendimiento promedio: 80.33333333333333 - Sede Medellin 
@@ -93,6 +105,26 @@ Sede:  Sede Medellin
 		11: Luciana Sanchez (18 años) - Rendimiento: 89
 -------------------
 Ranking de jugadores de la asociación:
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+	2: Alejandro Torres (27 años) - Rendimiento: 24
+	15: Santiago Rodriguez (23 años) - Rendimiento: 32
+	7: Camila Fernandez (24 años) - Rendimiento: 36
+	6: Sebastian Perez (25 años) - Rendimiento: 42
+	13: william hernandez (30 años) - Rendimiento: 44
+	18: Valeria Martinez (21 años) - Rendimiento: 45
+	5: Martina Martinez (30 años) - Rendimiento: 55
+	20: Sara Hernandez (22 años) - Rendimiento: 56
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+	16: Maria Gonzalez (28 años) - Rendimiento: 65
+	1: Sofia Garcia (21 años) - Rendimiento: 66
+	17: Carlos Lopez (19 años) - Rendimiento: 72
+	14: Laura Perez (20 años) - Rendimiento: 78
+	4: Juan Lopez (22 años) - Rendimiento: 78
+	19: Andres Perez (30 años) - Rendimiento: 78
+	12: Lucas Vasquez (26 años) - Rendimiento: 82
+	8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	11: Luciana Sanchez (18 años) - Rendimiento: 89
+	9: Isabella Diaz (40 años) - Rendimiento: 92
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Futbol - Rendimiento promedio: 71.33333333333333 - Sede Medellin 
@@ -203,6 +235,66 @@ Sede:  Sede Bogota
 		12: Lucas Vasquez (26 años) - Rendimiento: 82
 -------------------
 Ranking de jugadores de la asociación:
+	60: Diana Herrera (26 años) - Rendimiento: 11
+	58: Ana Campos (29 años) - Rendimiento: 12
+	52: Teresa Morales (29 años) - Rendimiento: 14
+	23: Adrian Torres (22 años) - Rendimiento: 15
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+	2: Alejandro Torres (27 años) - Rendimiento: 24
+	15: Santiago Rodriguez (23 años) - Rendimiento: 32
+	26: Fernanda Ortiz (26 años) - Rendimiento: 33
+	46: Sofia Ruiz (39 años) - Rendimiento: 34
+	7: Camila Fernandez (24 años) - Rendimiento: 36
+	50: Patricia Guzman (42 años) - Rendimiento: 37
+	24: Natalia Gomez (21 años) - Rendimiento: 39
+	40: Elena Cruz (27 años) - Rendimiento: 41
+	6: Sebastian Perez (25 años) - Rendimiento: 42
+	22: Gabriela Ramos (24 años) - Rendimiento: 43
+	13: william hernandez (30 años) - Rendimiento: 44
+	18: Valeria Martinez (21 años) - Rendimiento: 45
+	54: Veronica Castillo (25 años) - Rendimiento: 45
+	31: Emilio Molina (19 años) - Rendimiento: 46
+	43: Jorge Torres (27 años) - Rendimiento: 47
+	38: Lucia Alvarez (19 años) - Rendimiento: 49
+	29: Ricardo Ruiz (30 años) - Rendimiento: 52
+	33: Leonardo Delgado (22 años) - Rendimiento: 54
+	5: Martina Martinez (30 años) - Rendimiento: 55
+	20: Sara Hernandez (22 años) - Rendimiento: 56
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+	53: Luis Gutierrez (36 años) - Rendimiento: 57
+	36: Daniela Romero (24 años) - Rendimiento: 58
+	30: Victoria Leon (25 años) - Rendimiento: 59
+	35: Oscar Gutierrez (26 años) - Rendimiento: 60
+	41: Manuel Silva (23 años) - Rendimiento: 61
+	57: Marcos Soto (32 años) - Rendimiento: 62
+	39: Rodrigo Martinez (28 años) - Rendimiento: 63
+	16: Maria Gonzalez (28 años) - Rendimiento: 65
+	27: Pablo Ramirez (27 años) - Rendimiento: 65
+	49: Alberto Mendoza (30 años) - Rendimiento: 66
+	1: Sofia Garcia (21 años) - Rendimiento: 66
+	48: Alicia Ortega (26 años) - Rendimiento: 66
+	21: Diego Castro (23 años) - Rendimiento: 67
+	34: Rosa Moreno (23 años) - Rendimiento: 68
+	44: Carolina Ramirez (25 años) - Rendimiento: 69
+	17: Carlos Lopez (19 años) - Rendimiento: 72
+	47: Antonio Vasquez (28 años) - Rendimiento: 73
+	32: Andrea Herrera (20 años) - Rendimiento: 75
+	59: Hector Peña (28 años) - Rendimiento: 76
+	37: Miguel Diaz (21 años) - Rendimiento: 77
+	14: Laura Perez (20 años) - Rendimiento: 78
+	51: Eduardo Alvarez (22 años) - Rendimiento: 78
+	19: Andres Perez (30 años) - Rendimiento: 78
+	4: Juan Lopez (22 años) - Rendimiento: 78
+	28: Julia Sanchez (28 años) - Rendimiento: 79
+	12: Lucas Vasquez (26 años) - Rendimiento: 82
+	45: Martin Fernandez (21 años) - Rendimiento: 83
+	56: Carmen Martinez (30 años) - Rendimiento: 84
+	25: Ivan Vargas (29 años) - Rendimiento: 84
+	42: Paula Garcia (28 años) - Rendimiento: 88
+	55: Raul Romero (27 años) - Rendimiento: 88
+	11: Luciana Sanchez (18 años) - Rendimiento: 89
+	8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	9: Isabella Diaz (40 años) - Rendimiento: 92
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Tenis - Rendimiento promedio: 68.25 - Sede Bogota 
@@ -255,6 +347,18 @@ Sede:  Sede Medellin
 		12: Raul (31 años) - Rendimiento: 100
 -------------------
 Ranking de jugadores de la asociación:
+	3: Pedro (22 años) - Rendimiento: 21
+	4: Ana (23 años) - Rendimiento: 25
+	7: Jose (26 años) - Rendimiento: 48
+	10: Jorge (29 años) - Rendimiento: 51
+	6: Laura (25 años) - Rendimiento: 52
+	5: Carlos (24 años) - Rendimiento: 66
+	8: Luis (27 años) - Rendimiento: 73
+	11: Lorena (30 años) - Rendimiento: 90
+	9: Sara (28 años) - Rendimiento: 92
+	2: Maria (21 años) - Rendimiento: 94
+	1: Juan (20 años) - Rendimiento: 94
+	12: Raul (31 años) - Rendimiento: 100
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Volleyball - Sede Medellin 
@@ -314,6 +418,26 @@ Sede:  Sede Medellin
 		11: Luciana Sanchez (18 años) - Rendimiento: 89
 -------------------
 Ranking de jugadores de la asociación:
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+	2: Alejandro Torres (27 años) - Rendimiento: 24
+	15: Santiago Rodriguez (23 años) - Rendimiento: 32
+	7: Camila Fernandez (24 años) - Rendimiento: 36
+	6: Sebastian Perez (25 años) - Rendimiento: 42
+	13: william hernandez (30 años) - Rendimiento: 44
+	18: Valeria Martinez (21 años) - Rendimiento: 45
+	5: Martina Martinez (30 años) - Rendimiento: 55
+	20: Sara Hernandez (22 años) - Rendimiento: 56
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+	16: Maria Gonzalez (28 años) - Rendimiento: 65
+	1: Sofia Garcia (21 años) - Rendimiento: 66
+	17: Carlos Lopez (19 años) - Rendimiento: 72
+	19: Andres Perez (30 años) - Rendimiento: 78
+	4: Juan Lopez (22 años) - Rendimiento: 78
+	14: Laura Perez (20 años) - Rendimiento: 78
+	12: Lucas Vasquez (26 años) - Rendimiento: 82
+	8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	11: Luciana Sanchez (18 años) - Rendimiento: 89
+	9: Isabella Diaz (40 años) - Rendimiento: 92
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Futbol - Sede Medellin 
@@ -424,6 +548,66 @@ Sede:  Sede Bogota
 		12: Lucas Vasquez (26 años) - Rendimiento: 82
 -------------------
 Ranking de jugadores de la asociación:
+	60: Diana Herrera (26 años) - Rendimiento: 11
+	58: Ana Campos (29 años) - Rendimiento: 12
+	52: Teresa Morales (29 años) - Rendimiento: 14
+	23: Adrian Torres (22 años) - Rendimiento: 15
+	3: Valentina Rodriguez (19 años) - Rendimiento: 15
+	2: Alejandro Torres (27 años) - Rendimiento: 24
+	15: Santiago Rodriguez (23 años) - Rendimiento: 32
+	26: Fernanda Ortiz (26 años) - Rendimiento: 33
+	46: Sofia Ruiz (39 años) - Rendimiento: 34
+	7: Camila Fernandez (24 años) - Rendimiento: 36
+	50: Patricia Guzman (42 años) - Rendimiento: 37
+	24: Natalia Gomez (21 años) - Rendimiento: 39
+	40: Elena Cruz (27 años) - Rendimiento: 41
+	6: Sebastian Perez (25 años) - Rendimiento: 42
+	22: Gabriela Ramos (24 años) - Rendimiento: 43
+	13: william hernandez (30 años) - Rendimiento: 44
+	54: Veronica Castillo (25 años) - Rendimiento: 45
+	18: Valeria Martinez (21 años) - Rendimiento: 45
+	31: Emilio Molina (19 años) - Rendimiento: 46
+	43: Jorge Torres (27 años) - Rendimiento: 47
+	38: Lucia Alvarez (19 años) - Rendimiento: 49
+	29: Ricardo Ruiz (30 años) - Rendimiento: 52
+	33: Leonardo Delgado (22 años) - Rendimiento: 54
+	5: Martina Martinez (30 años) - Rendimiento: 55
+	20: Sara Hernandez (22 años) - Rendimiento: 56
+	53: Luis Gutierrez (36 años) - Rendimiento: 57
+	10: Daniel Ruiz (17 años) - Rendimiento: 57
+	36: Daniela Romero (24 años) - Rendimiento: 58
+	30: Victoria Leon (25 años) - Rendimiento: 59
+	35: Oscar Gutierrez (26 años) - Rendimiento: 60
+	41: Manuel Silva (23 años) - Rendimiento: 61
+	57: Marcos Soto (32 años) - Rendimiento: 62
+	39: Rodrigo Martinez (28 años) - Rendimiento: 63
+	16: Maria Gonzalez (28 años) - Rendimiento: 65
+	27: Pablo Ramirez (27 años) - Rendimiento: 65
+	49: Alberto Mendoza (30 años) - Rendimiento: 66
+	48: Alicia Ortega (26 años) - Rendimiento: 66
+	1: Sofia Garcia (21 años) - Rendimiento: 66
+	21: Diego Castro (23 años) - Rendimiento: 67
+	34: Rosa Moreno (23 años) - Rendimiento: 68
+	44: Carolina Ramirez (25 años) - Rendimiento: 69
+	17: Carlos Lopez (19 años) - Rendimiento: 72
+	47: Antonio Vasquez (28 años) - Rendimiento: 73
+	32: Andrea Herrera (20 años) - Rendimiento: 75
+	59: Hector Peña (28 años) - Rendimiento: 76
+	37: Miguel Diaz (21 años) - Rendimiento: 77
+	19: Andres Perez (30 años) - Rendimiento: 78
+	51: Eduardo Alvarez (22 años) - Rendimiento: 78
+	4: Juan Lopez (22 años) - Rendimiento: 78
+	14: Laura Perez (20 años) - Rendimiento: 78
+	28: Julia Sanchez (28 años) - Rendimiento: 79
+	12: Lucas Vasquez (26 años) - Rendimiento: 82
+	45: Martin Fernandez (21 años) - Rendimiento: 83
+	56: Carmen Martinez (30 años) - Rendimiento: 84
+	25: Ivan Vargas (29 años) - Rendimiento: 84
+	42: Paula Garcia (28 años) - Rendimiento: 88
+	55: Raul Romero (27 años) - Rendimiento: 88
+	8: Mateo Gonzalez (29 años) - Rendimiento: 89
+	11: Luciana Sanchez (18 años) - Rendimiento: 89
+	9: Isabella Diaz (40 años) - Rendimiento: 92
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Tenis - Sede Bogota 
