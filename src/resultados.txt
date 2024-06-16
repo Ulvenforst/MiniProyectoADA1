@@ -27,6 +27,7 @@ Sede:  Sede Medellin
 		11: Lorena (30 años) - Rendimiento: 90
 		12: Raul (31 años) - Rendimiento: 100
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Volleyball - Rendimiento promedio: 80.33333333333333 - Sede Medellin 
@@ -85,6 +86,7 @@ Sede:  Sede Medellin
 		8: Mateo Gonzalez (29 años) - Rendimiento: 89
 		11: Luciana Sanchez (18 años) - Rendimiento: 89
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Futbol - Rendimiento promedio: 71.33333333333333 - Sede Medellin 
@@ -194,6 +196,7 @@ Sede:  Sede Bogota
 		28: Julia Sanchez (28 años) - Rendimiento: 79
 		12: Lucas Vasquez (26 años) - Rendimiento: 82
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Tenis - Rendimiento promedio: 68.25 - Sede Bogota 
@@ -249,6 +252,7 @@ Sede:  Sede Medellin
 		11: Lorena (30 años) - Rendimiento: 90
 		12: Raul (31 años) - Rendimiento: 100
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Volleyball - Sede Medellin 
@@ -307,6 +311,7 @@ Sede:  Sede Medellin
 		8: Mateo Gonzalez (29 años) - Rendimiento: 89
 		11: Luciana Sanchez (18 años) - Rendimiento: 89
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Futbol - Sede Medellin 
@@ -416,6 +421,7 @@ Sede:  Sede Bogota
 		28: Julia Sanchez (28 años) - Rendimiento: 79
 		12: Lucas Vasquez (26 años) - Rendimiento: 82
 -------------------
+Ranking de jugadores de la asociación:
 -------------------
 Equipo con mayor rendimiento promedio:
 	Equipo de Tenis - Sede Bogota 

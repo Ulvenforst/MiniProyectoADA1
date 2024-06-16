@@ -26,4 +26,4 @@ from pruebas import decorador_pruebas
 @decorador_pruebas
 def runListas(*args, **kwargs):
     asociacion = kwargs.get('asociacion')
-    pass
+    return "Resultados con Listas:"

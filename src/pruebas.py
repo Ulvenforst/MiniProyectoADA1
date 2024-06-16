@@ -1,4 +1,7 @@
+import time
+
 def decorador_pruebas(func):
+    tiempos_de_ejecucion = []
     def wrapper(*args, **kwargs):
         Asociacion = kwargs.get('Asociacion')
         Jugador = kwargs.get('Jugador')
@@ -81,6 +84,7 @@ def decorador_pruebas(func):
         print("\n")
         print("PRUEBAS DE INPUT 1:")
         Asociacion.resetear_datos()
+        inicio = time.time()
         j1 = Jugador("Juan", 20, 94)
         j2 = Jugador("Maria", 21, 94)
         j3 = Jugador("Pedro", 22, 21)
@@ -110,10 +114,13 @@ def decorador_pruebas(func):
         a1 = Asociacion()
         a1.agregar_sedes([s1, s2])
         imprimirDatos(a1)
+        fin = time.time()
+        tiempos_de_ejecucion.append(fin - inicio)
 
         print("\n")
         print("PRUEBAS DE INPUT 2:")
         Asociacion.resetear_datos()
+        inicio = time.time()
         j1 = Jugador("Sofia Garcia", 21, 66)
         j2 = Jugador("Alejandro Torres", 27, 24)
         j3 = Jugador("Valentina Rodriguez", 19, 15)
@@ -155,10 +162,13 @@ def decorador_pruebas(func):
         a1 = Asociacion()
         a1.agregar_sedes([s1, s2])
         imprimirDatos(a1)
+        fin = time.time()
+        tiempos_de_ejecucion.append(fin - inicio)
 
         print("\n")
         Asociacion.resetear_datos()
         print("PRUEBAS DE INPUT 3:")
+        inicio = time.time()
         j1 = Jugador("Sofia Garcia", 21, 66)
         j2 = Jugador("Alejandro Torres", 27, 24)
         j3 = Jugador("Valentina Rodriguez", 19, 15)
@@ -262,8 +272,11 @@ def decorador_pruebas(func):
         a1 = Asociacion()
         a1.agregar_sedes([s1, s2, s3])
         imprimirDatos(a1)
+        fin = time.time()
 
-        return func(*args, **kwargs, asociacion=asociacion)
+        tiempos_de_ejecucion.append(fin - inicio)
+        resultado = func(*args, **kwargs, asociacion=asociacion)
+        return {'resultad': resultado, 'tiempo': tiempos_de_ejecucion}
     return wrapper
 
 def imprimirDatos(asociacion):
