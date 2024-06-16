@@ -31,7 +31,10 @@ class Nodo(object):
         Returns:
             list: Lista de equipos ordenados por rendimiento.
         """
-        return self.entidad.ranking_equipos
+        if self.entidad.ranking_equipos is None:
+            return self.entidad
+        else:
+            return self.entidad.ranking_equipos
 
     @property
     def ranking_jugadores(self):
@@ -41,7 +44,10 @@ class Nodo(object):
         Returns:
             list: Lista de jugadores ordenados por rendimiento.
         """
-        return self.entidad.ranking_jugadores
+        if self.entidad.ranking_jugadores is None:
+            return self.entidad
+        else:
+            return self.entidad.ranking_jugadores
 
     @property
     def nombre(self):
@@ -51,7 +57,10 @@ class Nodo(object):
         Returns:
             str: Nombre de la entidad.
         """
-        return self.entidad.nombre
+        if self.entidad.nombre is None:
+            return self.entidad
+        else:
+            return self.entidad.nombre
 
     # Métodos mágicos
     def __str__(self):

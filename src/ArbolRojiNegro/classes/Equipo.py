@@ -17,7 +17,7 @@ from ..data_structures.ArbolRojiNegro import ArbolRojiNegro
 from ..data_structures.Nodo import Nodo
 
 N_min = 2  # Número mínimo de jugadores por equipo
-N_max = 10  # Número máximo de jugadores por equipo
+N_max = 10 # Número máximo de jugadores por equipo
 
 class Equipo:
     def __init__(self, deporte):

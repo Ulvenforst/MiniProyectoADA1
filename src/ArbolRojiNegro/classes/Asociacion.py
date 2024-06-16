@@ -37,7 +37,7 @@ class Asociacion:
             None
         """
         if len(self._sedes) + len(nueva_sede) > K:
-            print(f"La sede {self._nombre} excederá el tamaño máximo permitido de Sedes.")
+            print(f"La sede {nueva_sede[-1].nombre} excederá el tamaño máximo permitido de Sedes.")
             return
         self._sedes.extend(nueva_sede)
 

@@ -13,10 +13,9 @@
 # de la aplicación y de medir el tiempo de ejecución de cada una de ellas. Estas
 # pruebas se aplican sobre ambas estructuras de datos, y son las dadas por el profesor.
 
-import time
+import time, random
 
 def decorador_pruebas(func):
-    tiempos_de_ejecucion = []
     def wrapper(*args, **kwargs):
         Asociacion = kwargs.get('Asociacion')
         Jugador = kwargs.get('Jugador')
@@ -27,6 +26,8 @@ def decorador_pruebas(func):
             raise ValueError("Faltan clases necesarias para configurar el entorno de pruebas")
 
         asociacion = Asociacion()
+
+        tiempos_de_ejecucion = []
 
         # # Crear jugadores
         # jugadores = [
@@ -287,10 +288,49 @@ def decorador_pruebas(func):
         a1.agregar_sedes([s1, s2, s3])
         imprimirDatos(a1)
         fin = time.perf_counter()
-
         tiempos_de_ejecucion.append(fin - inicio)
-        resultado = func(*args, **kwargs, asociacion=asociacion)
-        return {'resultad': resultado, 'tiempo': tiempos_de_ejecucion}
+
+        # Puebas de rendimiento aleatorias para analizar el comportamiento en el tiempo de ejecución.
+        tiempos_de_ejecucion_r = []
+        n_values = [100, 200, 300, 400, 500, 600, 700, 800, 800, 900, 1000]
+
+        for n in n_values:
+            print(f"PRUEBAS PARA n = {n}:")
+            Asociacion.resetear_datos()
+            inicio = time.perf_counter()
+
+            jugadores = []
+            for i in range(n):
+                nombre = f"Jugador {i+1}"
+                edad = random.randint(16, 60)
+                rendimiento = random.randint(10, 100)
+                jugador = Jugador(nombre, edad, rendimiento)
+                jugadores.append(jugador)
+
+            # Se generan 'n' equipos (asumiendo 2 deportes: futball and volleyball)
+            equipos = []
+            for i in range(int(n/3)):
+                deporte = "Futbol" if i % 2 == 0 else "Volleyball"
+                equipo = Equipo(deporte)
+                equipo.agregar_jugadores(jugadores[i:i+3])  # Intenta asignar 3 jugadores por equipo. Probar con int(n/3).
+                equipos.append(equipo)
+
+            sedes = []
+            for i in range(int(n/6)):
+                nombre_sede = f"Sede {i+1}"
+                sede = Sede(nombre_sede)
+                sede.agregar_equipos(equipos[i:i+2])  # Intenta asignar 2 equipos por sede. Probar con int(n/6).
+                sedes.append(sede)
+
+            asociacion = Asociacion()
+            asociacion.agregar_sedes(sedes)
+
+            fin = time.perf_counter()
+            tiempos_de_ejecucion_r.append(fin - inicio)
+
+            resultado = func(*args, **kwargs, asociacion=asociacion)
+
+        return {'resultado': resultado, 'tiempo_correctitud': tiempos_de_ejecucion, 'tiempo_rendimiento': tiempos_de_ejecucion_r}
     return wrapper
 
 def imprimirDatos(asociacion):
